@@ -1,7 +1,9 @@
+const { TOKEN } = require("./token");
+
 module.exports = {
     app: {
         px: '!',
-        token: 'OTU0MTM2NzM0NDgyOTg5MDk2.GQXJUA.75g5o2tXVCWrXHdgU-1TXUF_kNrb6M2yGi0ibI',
+        token: TOKEN,
         playing: 'Befehle: !back !clear !loop !pause !resume !seek !shuffle !skip !stop !volume'
     },
 
