@@ -1,6 +1,6 @@
 # Hochverdiener
 
-ein discrod musik player
+ein discord musik player
 
 1. $ npm i discord.js
 
