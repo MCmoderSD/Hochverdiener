@@ -1,4 +1,6 @@
 const { QueryType } = require('discord-player');
+let Locked = false;
+module.exports.locked = Locked;
 
 module.exports = {
     name: 'play',
@@ -8,6 +10,8 @@ module.exports = {
 
     async execute(client, message, args) {
         if (!args[0]) return message.channel.send(`Geht nicht! ist ${message.author} dumm? ❌`);
+        return message.channel.send(Locked)
+        //if(locked) return message.channel.send(`Geht nicht! ist ${message.author} dumm? ❌`);
 
         const res = await player.search(args.join(' '), {
             requestedBy: message.member,
