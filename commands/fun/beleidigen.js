@@ -7,7 +7,7 @@ module.exports = {
     aliases: ['homo'],
 
     execute(client, message) {
-        message.delete();
+
         const fileName = 'insult';
         fs.readFile(fileName, 'utf8', (err, data) => {
             if (err) {
@@ -15,12 +15,22 @@ module.exports = {
                 return;
             }
             insults = data.split('\n')
+            if(message.toString().includes('<@')){
             if(message.mentions.members)
                 message.mentions.members.forEach(member => {
 
                     message.channel.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", "<@" + member.id + ">"));
                 });
+            } else {
+                message.guild.members.fetch()
+                    .then(allMembers => {
+                        const member = allMembers.random();
+                        message.channel.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", "<@" + member.id + ">"));
+                    });
+
+            }
         });
+        message.delete();
     },
 };
 
