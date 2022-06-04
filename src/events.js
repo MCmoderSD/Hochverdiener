@@ -1,10 +1,12 @@
 
 player.on('error', (queue, error) => {
     console.log(`Error emitted from the queue ${error.message}`);
+    global.locked = false;
 });
 
 player.on('connectionError', (queue, error) => {
     console.log(`Error emitted from the connection ${error.message}`);
+    global.locked = false;
 });
 
 player.on('trackStart', (queue, track) => {
@@ -18,10 +20,12 @@ player.on('trackAdd', (queue, track) => {
 
 player.on('botDisconnect', (queue) => {
     queue.metadata.send('Welcher KNEK hat mich disconnected???');
+    global.locked = false;
 });
 
 player.on('channelEmpty', (queue) => {
     queue.metadata.send('Wenn keiner mehr da ist kann ich mich auch gleich verpissen!');
+    global.locked = false;
 });
 
 player.on('queueEnd', (queue) => {
