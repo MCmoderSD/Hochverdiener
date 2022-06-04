@@ -3,7 +3,7 @@ const fs = require('fs');
 var insults;
 
 module.exports = {
-    name: 'jokes',
+    name: 'joke',
     aliases: ['j'],
 
     execute(client, message) {
