@@ -7,8 +7,6 @@
 
 3. Edit **config.js** and exchange the **TOKEN** with your bot token
 
-To start the bot you must have installed [Node.js] [node] LTS then execute`` $ node main.js``
-[node]: https://nodejs.org/en/ "node.js"
+To start the bot you must have installed [Node.js](https://nodejs.org/en/ "node.js") LTS, then execute`` $ node main.js``
 
-All credits go to [[Zerio]][Zerio]
-[Zerio]: https://github.com/ZerioDev/Music-bot "Zerio"
+All credits go to [Zerio](https://github.com/ZerioDev/Music-bot "Zerio")
