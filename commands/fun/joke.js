@@ -14,11 +14,7 @@ module.exports = {
                 return;
             }
             insults = data.split('\n')
-            if(message.mentions.members)
-                message.mentions.members.forEach(member => {
-
-                    message.channel.send(insults[Math.floor(Math.random() * insults.length)]);
-                });
+            message.channel.send(insults[Math.floor(Math.random() * insults.length)]);
         });
     },
 };
