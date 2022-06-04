@@ -10,4 +10,4 @@
 
    To start the bot you must have installed [Node.js](https://nodejs.org/en/ "node.js") LTS, then execute ``$ node main.js`` or ``$ ./start.sh``
 
-   All credits go to [Zerio](https://github.com/ZerioDev/Music-bot "Zerio")
+   All music commands come from [Zerio](https://github.com/ZerioDev/Music-bot "Zerio")

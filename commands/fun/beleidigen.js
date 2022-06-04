@@ -4,7 +4,7 @@ var insults;
 
 module.exports = {
     name: 'beleidigen',
-    aliases: ['homo'],
+    aliases: ['homo', 'insult', 'beileidige'],
 
     execute(client, message) {
 

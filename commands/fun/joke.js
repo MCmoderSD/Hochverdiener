@@ -4,7 +4,7 @@ var insults;
 
 module.exports = {
     name: 'joke',
-    aliases: ['j', 'witz'],
+    aliases: ['jokes', 'witz'],
 
     execute(client, message) {
         const fileName = 'jokes';
