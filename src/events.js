@@ -30,4 +30,5 @@ player.on('channelEmpty', (queue) => {
 
 player.on('queueEnd', (queue) => {
     queue.metadata.send('So bin fertig **FICKT EUCH bin weg** ✅');
+    message.delete();
 });
