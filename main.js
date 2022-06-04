@@ -19,4 +19,3 @@ require('./src/loader');
 require('./src/events');
 
 client.login(client.config.app.token);
-
