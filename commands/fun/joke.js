@@ -4,7 +4,7 @@ var insults;
 
 module.exports = {
     name: 'joke',
-    aliases: ['j'],
+    aliases: ['j'] ['witz'],
 
     execute(client, message) {
         const fileName = 'jokes';
@@ -18,5 +18,3 @@ module.exports = {
         });
     },
 };
-
-
