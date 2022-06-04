@@ -7,10 +7,11 @@ module.exports = {
 
        execute(client, message) {
 
-        if(message.mentions.members.first()){
+        if(message.mentions.members){
+            message.mentions.members.forEach(member => {
+               member.voice.disconnect().then(() =>  console.log(`${member.displayname} was disconnected`));
 
-            message.mentions.members.first().voice.disconnect();
-            console.log(`${message.mentions.members.first().displayname} was disconnected`)
+            });
         }
         message.delete();
     },
