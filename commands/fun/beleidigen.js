@@ -6,11 +6,9 @@ module.exports = {
     name: 'beleidigen',
     aliases: ['homo'],
 
-
-
     execute(client, message) {
         message.delete();
-        const fileName = 'D:\\Js\\insult';
+        const fileName = 'insult';
         fs.readFile(fileName, 'utf8', (err, data) => {
             if (err) {
                 console.log(err);
