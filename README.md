@@ -1,5 +1,5 @@
 # Hochverdiener
-<img src="http://178.254.18.170/content/img/Hochverdiener.jpg" width="128px" style="padding-left: 300px;">
+<img src="http://178.254.18.170/content/img/Hochverdiener.jpg" width="128px" style="text-align: center;">
 
 
 1. ``$ git clone https://github.com/MCmoderSD/Hochverdiener/``
