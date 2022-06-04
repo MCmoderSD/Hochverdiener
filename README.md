@@ -1,5 +1,5 @@
 # Hochverdiener
-![PB!](http://178.254.18.170/content/img/Hochverdiener.jpg =100x20)
+![PB!](http://178.254.18.170/content/img/Hochverdiener.jpg =250x)
 
 
 1. ``$ git clone https://github.com/MCmoderSD/Hochverdiener/``
