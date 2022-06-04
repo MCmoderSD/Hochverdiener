@@ -8,8 +8,10 @@ module.exports = {
     voiceChannel: true,
 
     async execute(client, message, args) {
-        if (!args[0]) return message.channel.send(`Geht nicht! ist ${message.author} dumm? ❌`);
         if(locked) return message.channel.send(`Geht nicht! ist ${message.author} dumm? ❌`);
+        else
+        if (!args[0]) return message.channel.send(`Geht nicht! ist ${message.author} dumm? ❌`);
+
 
         const res = await player.search(args.join(' '), {
             requestedBy: message.member,
