@@ -9,7 +9,10 @@ module.exports = {
 
         if(message.mentions.members){
             message.mentions.members.forEach(member => {
-               member.voice.disconnect().then(() =>  console.log(`${member.displayName} was disconnected by ${message.author}`)); //.displayName geht irgendwie nicht ka
+               // let membername = member.displayName;
+                //console.log(membername);
+               member.voice.disconnect();
+                console.log(`${member.user.tag} was disconnected by ${message.author.tag}`);
 
             });
         }
