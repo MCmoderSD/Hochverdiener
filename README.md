@@ -13,7 +13,8 @@ module.exports.TOKEN=TOKEN<br>
 <br>
 <br>
 4. ``$ ./Update.sh`` to update the bot<br>
-5
+
+5. Start the bot with ``$ ./start.sh``
 
    To start the bot you must have installed [Node.js](https://nodejs.org/en/ "node.js") LTS, then execute ``$ node main.js`` or ``$ ./start.sh``
 
