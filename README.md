@@ -7,7 +7,7 @@
 const TOKEN = '`Paste your Discord Bot Token here`'<br>
 module.exports.TOKEN=TOKEN<br><br>
 
-4. Give permission to `update.sh` and ``start.sh`:<br>
+4. Give permission to `update.sh` and `start.sh`:<br>
 	4.1 `$ sudo chmod 777 upadte.sh`
 	4.2 `$ sudo chmod 777 start.sh`<br><br>
 
