@@ -6,8 +6,8 @@
 3. Create new file `token.js` then paste in:<br>
 
 
-`const TOKEN = 'Paste your Discord bot token here'`<br>
-`module.exports.TOKEN=TOKEN`<br><br>
+	`const TOKEN = 'Paste your Discord bot token here'`<br>
+	`module.exports.TOKEN=TOKEN`<br><br>
 
 
 4. Give permission to `update.sh` and `start.sh`:<br>
