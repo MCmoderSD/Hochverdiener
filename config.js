@@ -1,10 +1,11 @@
 const { TOKEN } = require("./token");
+const { allCommands } = require("./commands/core/help")
 
 module.exports = {
     app: {
         px: '!',
         token: TOKEN,
-        playing: 'Befehle: !back !clear !loop !pause !resume !seek !shuffle !skip !stop !volume'
+        playing: `Befehle: ${allCommands}`
     },
 
     opt: {

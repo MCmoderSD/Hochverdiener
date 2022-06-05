@@ -1,6 +1,7 @@
 const ms = require('ms');
 const tagCommands = '!insult !joke !mobbing !sexist'
 const musicCommands = '!back !clear !loop !nowplaying !pause !play !progress !queue !resume !save !search !seek !shuffle !skip !stop !volume'
+const allCommands = `${tagCommands} ${musicCommands}`
 module.exports = {
     name: 'help',
     aliases: ['hilfe', 'h'],
@@ -10,3 +11,5 @@ module.exports = {
         message.channel.send(`Alle @ Befehle: ${tagCommands} \nAlle Music Befehle: ${musicCommands}`);
     },
 };
+
+module.exports.allCommands=allCommands
