@@ -17,6 +17,6 @@
 
 5. `$ ./Update.sh` to update the bot<br>
 
-6. Start the bot with `$ ./start.sh`<br><br><br><br><br><br><br><br><br>
+6. Start the bot with `$ ./start.sh`<br><br><br><br><br>
 
-### All music commands like the blank template come from [Zerio](https://github.com/ZerioDev/Music-bot "Zerio")
+### All music commands like the blank template come from [ZerioDev](https://github.com/ZerioDev/Music-bot "Zerio")
