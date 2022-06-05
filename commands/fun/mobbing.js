@@ -17,10 +17,9 @@ module.exports = {
                 if(message.mentions.members)
                     message.mentions.members.forEach(member => {
                        member.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", "<@" + member.id + ">"));
+                       console.log(`${member.user.tag} wird gemobbt von ${message.author.tag}`)
                     });
         });
         message.delete();
     },
 };
-
-
