@@ -1,6 +1,6 @@
 # Hochverdiener
-
-
+<br> You can add the Bot to Your Server [Click Here](https://discord.com/api/oauth2/authorize?client_id=954136734482989096&permissions=8&scope=bot)<br><br>
+## Installation
 1. `$ git clone https://github.com/MCmoderSD/Hochverdiener.git`
 2. `$ cd Hochverdiener`
 3. Create new file `token.js` then paste in:<br><br>
