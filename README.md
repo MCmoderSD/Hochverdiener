@@ -2,11 +2,18 @@
 
 
 
-1. ``$ git clone https://github.com/MCmoderSD/Hochverdiener/``
+1. ``$ git clone https://github.com/MCmoderSD/Hochverdiener.git``
 
 2. ``$ cd Hochverdiener``
 
-3. Edit **config.js** and exchange the **TOKEN** with your bot token
+3. Create new file ``token.js`` then paste in:<br>
+<br>
+const TOKEN = '``Paste your Discord Bot Token here``'<br>
+module.exports.TOKEN=TOKEN<br>
+<br>
+<br>
+4. ``$ ./Update.sh`` to update the bot<br>
+5
 
    To start the bot you must have installed [Node.js](https://nodejs.org/en/ "node.js") LTS, then execute ``$ node main.js`` or ``$ ./start.sh``
 
