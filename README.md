@@ -1,4 +1,4 @@
-# Hochverdiener <!--<img src="http://178.254.18.170/content/img/Hochverdiener.jpg" width="128px">-->  
+# Hochverdiener
 
 
 1. `$ git clone https://github.com/MCmoderSD/Hochverdiener.git`
@@ -14,8 +14,6 @@ module.exports.TOKEN=TOKEN<br>
 <br>
 5. `$ ./Update.sh` to update the bot<br>
 
-6. Start the bot with `$ ./start.sh`
+6. Start the bot with `$ ./start.sh`<br><br><br><br><br>
 
-   To start the bot you must have installed [Node.js](https://nodejs.org/en/ "node.js") LTS, then execute `$ node main.js` or `$ ./start.sh`
-
-   All music commands come from [Zerio](https://github.com/ZerioDev/Music-bot "Zerio")
+### All music commands like the blank template come from [ZerioDev](https://github.com/ZerioDev/Music-bot "Zerio")
