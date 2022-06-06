@@ -5,7 +5,8 @@ module.exports = {
     app: {
         px: '!',
         token: TOKEN,
-        playing: `Befehle: ${allCommands}`
+//        playing: `Befehle: ${allCommands}`
+        playing: '!help'
     },
 
     opt: {
