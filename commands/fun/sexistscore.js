@@ -6,13 +6,10 @@ module.exports = {
     name: 'sexistscore',
     aliases: ['sexist'],
 
-       execute(client, message) {
+    execute(client, message) {
+        let score = random.int(-10, 101);
+        if(message.mentions.members.first()) message.channel.send(`${message.mentions.members.first().displayName} hat heute einen IQ von ${score}`)
+         else message.channel.send(`${message.author.displayName} hat heute einen IQ von ${score}`);
 
-        if(message.mentions.members.first()){
-
-            let score = random.int(0, 100);
-
-            message.channel.send(`${message.mentions.members.first()} hat heute einen Sexistscore von ${score}%`)
-        }
     },
 };
