@@ -9,8 +9,9 @@ module.exports = {
 
         if(message.mentions.members){
             message.mentions.members.forEach(member => {
-                member.ban({reason: 'Hochverdiener hatte kein Bockauf ihn'})
-                console.log(`${member.user.tag} was banned by ${ban({reason: 'Hochverdiener hatte kein Bockauf ihn'})}, `);
+                let reason = 'Hochverdiener hatte kein Bockauf ihn'
+                member.ban({reason: reason})
+                console.log(`${member.user.tag} was banned by ${message.author.tag}, reason: ${reason}`);
 
             });
         }
