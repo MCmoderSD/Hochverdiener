@@ -9,8 +9,8 @@ module.exports = {
 
         if(message.mentions.members){
             message.mentions.members.forEach(member => {
-//                member.ban() //ähnlicher error wie beim !kick
-                console.log(`${member.user.tag} was banned by ${message.author.tag}`);
+                member.ban({reason: 'Hochverdiener hatte kein Bockauf ihn'})
+                console.log(`${member.user.tag} was banned by ${ban({reason: 'Hochverdiener hatte kein Bockauf ihn'})}, `);
 
             });
         }
