@@ -20,13 +20,10 @@ module.exports = {
         let länge = random.int(-3, 32);
         let breite = random.int(1, 7);
 
-
-        if(message.mentions.members.first()){
-                           
+        if(message.mentions.members.first()){                
             message.channel.send(`${message.mentions.members.first()}'s ${getRandom(dicknames)} ist ${länge}cm lang und ${breite}cm breit 🍆`)
 
-        } else {
-            
+        } else {  
             message.channel.send(`${message.author}'s ${getRandom(dicknames)} ist ${länge}cm lang und ${breite}cm breit 🍆`)
         }
     },

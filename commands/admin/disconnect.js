@@ -1,6 +1,5 @@
 const { Client, Message } = require('discord.js');
 
-
 module.exports = {
     name: 'disconnect',
     aliases: ['bye'],
