@@ -1,3 +1,5 @@
+var insults;
+
 module.exports = {
     name: 'fact',
     aliases: ['fakt'],
@@ -14,35 +16,11 @@ module.exports = {
         var list6 = ["Kinder", "Inder","Rinder","Piloten","Konsolen","Computer","Schokolade","Arme","Beine","Gehirne","Pflanzen","Eier","Säcke","Kunden","Rundungen","Brüste","Kassierer","Männer","Vögel","Schokoladenfondeubrunnen","Kekse","Oberleitungen","Hunde","Katzen","Anzüge","Senioren","Stühle","Xylophone","Klaviere","Kondome","Kiffer",]
         
         
-        function fakt1(act1) {
-            return act1[Math.floor(Math.random() * act1.length)];
-        }
+        function getRandom(list)
+        return list[Math.floor(Math.random() * list.length)]
         
-        function fakt2(act2) {
-            return act2[Math.floor(Math.random() * act2.length)];
-        }
         
-        function fakt3(act3) {
-            return act3[Math.floor(Math.random() * act3.length)];
-        }
-        
-        function fakt4(act4) {
-            return act4[Math.floor(Math.random() * act4.length)];
-        }
-        
-        function fakt5(act5) {
-            return act5[Math.floor(Math.random() * act5.length)];
-        }
-        
-        function fakt6(act6) {
-            return act6[Math.floor(Math.random() * act6.length)];
-        }
-
-        for(var x=0; x<1; x++);
-        
-        const fact = `${fakt1(list1)} ${fakt2(list2)} ${fakt3(list3)} ${fakt4(list4)} ${fakt5(list5)} ${fakt6(list6)}`
-
-        message.channel.send(fact)
+        message.channel.send(`${getRandom.list1}`)
 
     }
 }

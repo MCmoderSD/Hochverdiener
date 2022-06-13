@@ -9,7 +9,7 @@ module.exports = {
 
         if(message.mentions.members){
             message.mentions.members.forEach(member => {
-//               member.kick(); // geht irgendwie nicht ka irgendwas mit permission
+               member.kick();  //geht irgendwie nicht ka irgendwas mit permission
                 console.log(`${member.user.tag} was kicked by ${message.author.tag}`);
 
             });
