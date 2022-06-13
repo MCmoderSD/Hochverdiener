@@ -7,13 +7,12 @@ module.exports = {
 
        execute(client, message) {
 
-        if(message.mentions.members){
+        if(message.mentions.members)
             message.mentions.members.forEach(member => {
-//                member.ban() //ähnlicher error wie beim !kick
+                member.ban();
                 console.log(`${member.user.tag} was banned by ${message.author.tag}`);
 
             });
-        }
         message.delete();
     },
 };
