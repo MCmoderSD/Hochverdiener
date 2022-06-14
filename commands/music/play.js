@@ -38,9 +38,3 @@ module.exports = {
         if (!queue.playing) await queue.play();
     }
 };
-
-
-
-
-
-
