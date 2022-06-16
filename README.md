@@ -1,11 +1,11 @@
-# Hochverdiener
-<br> You can add the bot to your server: [Click Here](https://discord.com/api/oauth2/authorize?client_id=954136734482989096&permissions=8&scope=bot)<br><br>
+# Hochverdiener [LITE]
+<br> You can add the bot to your server: [Click Here](https://discord.com/api/oauth2/authorize?client_id=986802937177182228&permissions=3155968&scope=bot)<br><br>
 ## Installation
 First of all [Node.js](https://nodejs.org/en/) LTS has to be installed on your machine.<br>
 Either you install it manual [Node.js LTS](https://nodejs.org/en/download/) or for<br>
 Linux Ubuntu use: `$ sudo apt-get install nodejs`<br>
 
-1. `$ git clone https://github.com/MCmoderSD/Hochverdiener.git`
+1. `$ git clone https://github.com/MCmoderSD/Hochverdiener-LITE.git`
 2. `$ cd Hochverdiener`
 3. Create new file `token.js` then paste in:<br><br>
 const TOKEN = '`Paste your Discord Bot Token here`'<br>

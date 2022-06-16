@@ -1,9 +1,9 @@
 {
-  "name": "hochverdiener",
+  "name": "hochverdiener [LITE]",
   "main": "main.js",
   "author": "MCmoderSD & Rebix | Credits go to ZerioDev",
   "version": "1.0.0",
-  "repository": "https://github.com/MCmoderSD/Hochverdiener.git",
+  "repository": "https://github.com/MCmoderSD/Hochverdiener-LITE.git",
   "description": "The Music Bot you've ever wanted",
   "scripts": {
     "start": "node main.js"
