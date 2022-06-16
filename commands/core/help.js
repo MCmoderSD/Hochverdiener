@@ -1,5 +1,5 @@
 const ms = require('ms');
-const tagCommands = '!dicksize !fakt !insult !iq !joke !mobbing !sexist'
+const tagCommands = '!dicksize !fakt !insult !iq !joke !mobbing !sexist !zahl'
 const musicCommands = '!back !clear !loop !nowplaying !pause !play !progress !queue !resume !save !search !seek !shuffle !skip !stop !volume'
 const allCommands = `${tagCommands} ${musicCommands}`
 module.exports = {
