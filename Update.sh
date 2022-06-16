@@ -1,1 +1,1 @@
-git pull https://github.com/MCmoderSD/Hochverdiener-LITE.git
+sudo git pull https://github.com/MCmoderSD/Hochverdiener-LITE.git

@@ -7,9 +7,9 @@ Linux Ubuntu use: `$ sudo apt-get install nodejs`<br>
 
 1. `$ git clone https://github.com/MCmoderSD/Hochverdiener-LITE.git`
 2. `$ cd Hochverdiener`
-3. Create new file `token.js` then paste in:<br><br>
-const TOKEN = '`Paste your Discord Bot Token here`'<br>
-module.exports.TOKEN=TOKEN<br><br>
+3. Create new file `token` then paste in:<br><br>
+const Token = '`Paste your Discord Bot Token here`'<br>
+module.exports.Token=Token<br><br>
 
 4. Give permission to `update.sh` and `start.sh`:<br><br>
 	4.1 `$ sudo chmod 777 update.sh`<br>
