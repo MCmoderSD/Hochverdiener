@@ -25,6 +25,11 @@ module.exports = (client, message) => {
 
         if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(`You are not in the same voice channel ${message.author}... try again ? ❌`);
     }
+    let lvl = 0;
+            message.guild.members.cache.get(client.user.id).roles.cache.some(role => {
+        if (role.name.includes("lvl.")) lvl = role.name.split('.')[1];
+    })
+    if(cmd.lvl <= lvl || !cmd.lvl)
+        if (cmd) cmd.execute(client, message, args);
 
-    if (cmd) cmd.execute(client, message, args);
 };

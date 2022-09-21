@@ -2,6 +2,7 @@ const { Client, Message } = require('discord.js');
 const { fs } = require('fs');
 module.exports = {
     name: 'ban',
+    lvl: 3,
     aliases: ['banhammer'],
 
        execute(client, message) {

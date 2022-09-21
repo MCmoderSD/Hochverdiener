@@ -5,7 +5,7 @@ var insults;
 module.exports = {
     name: 'beleidigen',
     aliases: ['homo', 'insult', 'beileidige'],
-
+    lvl: 3,
     execute(client, message) {
 
         const fileName = 'insult';

@@ -2,6 +2,7 @@ const random = require('random');
 
 module.exports = {
     name: 'iq',
+    lvl: 2,
     aliases: ['intelligenz', 'intelligenz-quotient'],
 
     execute(client, message) {

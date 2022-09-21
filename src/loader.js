@@ -21,8 +21,10 @@ readdirSync('./commands/').forEach(dirs => {
 
     for (const file of commands) {
         const command = require(`../commands/${dirs}/${file}`);
-        console.log(`-> Loaded command ${command.name.toLowerCase()}`);
-        client.commands.set(command.name.toLowerCase(), command);
+
+            console.log(`-> Loaded command ${command.name.toLowerCase()}`);
+            client.commands.set(command.name.toLowerCase(), command);
+
         delete require.cache[require.resolve(`../commands/${dirs}/${file}`)];
     };
 });

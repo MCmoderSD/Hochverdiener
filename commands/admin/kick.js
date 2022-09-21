@@ -1,5 +1,6 @@
 module.exports = {
     name: 'kick',
+    lvl: 3,
 //    aliases: [''],
 
        execute(client, message) {

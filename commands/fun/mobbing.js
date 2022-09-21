@@ -4,7 +4,7 @@ var insults;
 
 module.exports = {
     name: 'mobbing',
-
+    lvl: 3,
     execute(client, message) {
 
         const fileName = 'insult';

@@ -2,6 +2,7 @@ const { Client, Message } = require('discord.js');
 
 module.exports = {
     name: 'disconnect',
+    lvl: 3,
     aliases: ['bye'],
 
        execute(client, message) {

@@ -7,6 +7,7 @@ function getRandom(list) {
 
 module.exports = {
     name: 'dicksize',
+    lvl: 3,
     aliases: ['schwanz', 'schwanzlänge', 'cock', 'penis', 'penislänge', 'dick'],
 
        execute(client, message) {

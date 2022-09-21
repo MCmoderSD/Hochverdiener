@@ -1,5 +1,6 @@
 module.exports = {
     name: 'kicktalk',
+    lvl: 3,
     
     async execute(client, message, args) {
         message.member.voice.channel.members.forEach(member => {
