@@ -23,6 +23,6 @@ module.exports = {
             const success = queue.setRepeatMode(queue.repeatMode === 0 ? QueueRepeatMode.TRACK : QueueRepeatMode.OFF);
 
             return message.channel.send(success ? `Loop ist **${queue.repeatMode === 0 ? 'aus!' : 'an!'}** Der derzeitige Song wird bis zur Unendlichkeit, so wie dem Gewicht deiner Mudder, weitergespielt 🔂` : `Geht nicht! ist ${message.author} dumm? ❌`);
-        };
+        }
     },
 };

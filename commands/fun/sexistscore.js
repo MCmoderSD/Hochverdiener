@@ -4,7 +4,7 @@ const random = require('random');
 module.exports = {
     name: 'sexistscore',
     aliases: ['sexist'],
-    lvl: 3,
+    lvl: 2,
     execute(client, message) {
         let score = random.int(-10, 101);
         if(message.mentions.members.first()) message.channel.send(`${message.mentions.members.first().displayName} hat heute einen IQ von ${score}`)
