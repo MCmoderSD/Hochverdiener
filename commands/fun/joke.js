@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var insults;
+let insults;
 
 module.exports = {
     name: 'joke',

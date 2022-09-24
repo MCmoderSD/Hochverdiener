@@ -17,6 +17,7 @@
     "ms": "^3.0.0-canary.1",
     "node-fetch": "^2.6.7",
     "opusscript": "^0.0.8",
-    "random": "^3.0.6"
+    "random": "^3.0.6",
+    "ytdl-core": "^4.11.2"
   }
 }
