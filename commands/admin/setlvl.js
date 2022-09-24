@@ -4,7 +4,7 @@ const { fs } = require('fs');
 
 module.exports = {
     name: 'setlvl',
-    aliases: ['a'],
+    aliases: ['lvl'],
     execute(client, message) {
         if(message.member.roles.cache.some(role => role.name === 'Developer')) {
             message.mentions.members.forEach(member => {
