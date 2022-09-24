@@ -1,7 +1,8 @@
 # Hochverdiener
 <br> You can add the bot to your server: [Click Here](https://discord.com/api/oauth2/authorize?client_id=954136734482989096&permissions=8&scope=bot)<br><br>
+
 ## Installation
-If you want to create your own bot you need to perform the following steps:
+If you want to create your own bot you need to perform the following steps:<br>
 First of all [Node.js](https://nodejs.org/en/) LTS has to be installed on your machine.<br>
 Either you install it manual [Node.js LTS](https://nodejs.org/en/download/) or for<br>
 Linux Ubuntu use: `$ sudo apt-get install nodejs`<br>
