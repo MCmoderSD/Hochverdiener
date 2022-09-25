@@ -11,8 +11,8 @@ module.exports = {
 
         if (!queue.tracks[0]) return message.channel.send(`Dikka ${message.author} nach dem Song ist Ende Gelände! ❌`);
 
-//        await queue.shuffle();
-        queue.shuffle();
+        await queue.shuffle();
+
 
         return message.channel.send(`Ok **${queue.tracks.length}** song(s) wurden geshuffled! ✅`);
     },
