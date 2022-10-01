@@ -6,7 +6,7 @@ module.exports = {
     async execute({ client, inter }) {
 
         const m = await inter.reply("Ping?")
-        inter.editReply(`Derzeit hab mit meinem Hochverdiener Internet einen Ping von -**${client.ws.ping}ms** zu deiner Mudder!`)
+        inter.reply(`Derzeit hab mit meinem Hochverdiener Internet einen Ping von -**${client.ws.ping}ms** zu deiner Mudder!`)
 
     },
 };
