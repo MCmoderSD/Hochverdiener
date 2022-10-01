@@ -1,5 +1,4 @@
 const { QueueRepeatMode } = require('discord-player');
-const { dumm } = require('../../config.js');
 module.exports = async ({  inter, queue }) => {
 
     const methods = ['disabled', 'track', 'queue'];

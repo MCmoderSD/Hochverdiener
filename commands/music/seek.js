@@ -3,12 +3,12 @@ const { ApplicationCommandType, ApplicationCommandOptionType } = require('discor
 
 module.exports = {
     name: 'seek',
-    description: 'skip back or foward in a song',
+    description: 'Spule vor oder zurück',
     voiceChannel: true,
     options: [
     {
         name: 'time',
-        description: 'Wie weit du vorspullen willst',
+        description: 'Wie weit du vor oder zurrückspulen willst  willst',
         type: ApplicationCommandOptionType.String,
         required: true,
     }

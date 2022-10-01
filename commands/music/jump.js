@@ -1,5 +1,5 @@
 const { ApplicationCommandOptionType } = require('discord.js');
-
+const { dumm } = require('../../config.js');
 module.exports = {
     name: 'jump',
     description: "Springt zur angegebenen Stelle in der Playlist",
