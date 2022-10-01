@@ -2,7 +2,7 @@ const { QueryType } = require('discord-player');
 const { ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     name: 'play',
-    description: "play a song!",
+    description: "Packt einen Song oder eine Playlist in die Warteschlange",
     voiceChannel: true,
     options: [
         {

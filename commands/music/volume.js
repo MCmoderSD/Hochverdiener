@@ -8,7 +8,7 @@ module.exports = {
     options: [
         {
             name: 'volume',
-            description: 'the amount volume',
+            description: 'Wie laut ich die Musik machen soll',
             type: ApplicationCommandOptionType.Number,
             required: true,
             minValue: 1,

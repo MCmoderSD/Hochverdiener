@@ -1,6 +1,6 @@
 module.exports = {
     name: 'shuffle',
-    description: 'shuffle the track',
+    description: 'Shuffled die Queue',
     voiceChannel: true,
 
     async execute({ inter }) {

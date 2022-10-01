@@ -1,6 +1,8 @@
+// noinspection SpellCheckingInspection
+
 module.exports = {
     name: 'fakt',
-    description: 'gives you a random fact',
+    description: 'Ich gebe dir ein random Fakt',
     voiceChannel: false,
 
     async execute({ inter }) {

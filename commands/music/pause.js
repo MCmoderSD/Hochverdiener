@@ -1,6 +1,6 @@
 module.exports = {
     name: 'pause',
-    description: 'pause the track',
+    description: 'Pausiert den Song',
     voiceChannel: true,
 
     execute({ inter }) {

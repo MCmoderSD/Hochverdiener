@@ -2,7 +2,7 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: 'save',
-    description: 'save the current track!',
+    description: 'Schickt dir Infos zum aktuellen Song in den DMs',
     voiceChannel: true,
 
     async execute({ inter }) {

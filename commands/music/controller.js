@@ -8,7 +8,7 @@ module.exports = {
     options: [
         {
             name: 'channel',
-            description: 'the channel you want to send it to',
+            description: 'in welchem channel soll der controller sein',
             type: ApplicationCommandOptionType.Channel,
             required: true,
         }

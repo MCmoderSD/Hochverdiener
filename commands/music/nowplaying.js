@@ -3,7 +3,7 @@ const { dumm } = require('../../config.js');
 
 module.exports = {
     name: 'nowplaying',
-    description: 'view what is playing!',
+    description: 'Zeigt den aktuellen Song an',
     voiceChannel: true,
 
     execute({ inter }) {

@@ -2,7 +2,7 @@ const fs = require('fs');
 
 module.exports = {
     name: 'joke',
-    description: 'Sends a random joke',
+    description: 'Ich mach n Witz',
     voiceChannel: false,
 
     async execute({ inter }) {

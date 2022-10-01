@@ -1,6 +1,6 @@
 module.exports = {
     name: 'stop',
-    description: 'stop the track',
+    description: 'Stoppt alles',
     voiceChannel: true,
 
     execute({ inter }) {

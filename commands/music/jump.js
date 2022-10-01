@@ -2,7 +2,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 
 module.exports = {
     name: 'jump',
-    description: "Jumps to particular track in queue",
+    description: "Springt zur angegebenen Stelle in der Playlist",
     voiceChannel: true,
     options: [
         {

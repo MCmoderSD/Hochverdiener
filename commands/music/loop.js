@@ -4,7 +4,7 @@ const { dumm } = require('../../config.js');
 
 module.exports = {
     name: 'loop',
-    description: 'enable or disable looping of song\'s or the whole queue',
+    description: 'Loop an/aus',
     voiceChannel: true,
     options: [
         {

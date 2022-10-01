@@ -2,7 +2,7 @@ const ms = require('ms');
 
 module.exports = {
     name: 'ping',
-    description: "Get the ping of the bot!",
+    description: "Zeigt dir die Latenz des Bots an",
     async execute({ client, inter }) {
 
         const m = await inter.reply("Ping?")

@@ -8,7 +8,7 @@ module.exports = {
     options: [
     {
         name: 'time',
-        description: 'time that you want to skip to',
+        description: 'Wie weit du vorspullen willst',
         type: ApplicationCommandOptionType.String,
         required: true,
     }

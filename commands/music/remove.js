@@ -2,7 +2,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 
 module.exports = {
     name: 'remove',
-    description: "remove a song from the queue",
+    description: "Löscht einen Song aus der Playlist",
     voiceChannel: true,
     options: [
         {

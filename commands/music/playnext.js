@@ -8,7 +8,7 @@ module.exports = {
     options: [
         {
             name: 'song',
-            description: 'the song you want to playnext',
+            description: 'Der Song den du als nächstes hören willst',
             type: ApplicationCommandOptionType.String,
             required: true,
         }
