@@ -27,6 +27,5 @@ module.exports = {
 
         let user = inter.options.getUser('user') || inter.user;
         inter.reply(`${user}'s ${getRandom(dickname)} ist ${laenge}cm lang und ${breite}cm breit 🍆`);
-        console.log(getRandom(dickname))
     },
 };
