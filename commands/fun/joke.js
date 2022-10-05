@@ -4,7 +4,6 @@ module.exports = {
     name: 'joke',
     description: 'Ich mach n Witz',
     voiceChannel: false,
-
     async execute({ inter }) {
 
         const fileName = 'jokes';

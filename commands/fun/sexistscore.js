@@ -4,6 +4,7 @@ module.exports = {
     name: 'sexistscore',
     description: 'Ich schaue wie sexistisch jemand ist',
     voiceChannel: false,
+    blacklist: true,
     options: [
         {
             name: 'user',
