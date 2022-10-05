@@ -1,6 +1,8 @@
+
+
 const mysql = require('mysql');
 
-module.exports.database={setvalues, getvalues};
+
 const connection = mysql.createConnection({
     host: 'mcmodersd.live',
     user: 'root',
@@ -8,29 +10,36 @@ const connection = mysql.createConnection({
     database: 'hochverdiener'
 });
 
-//servercfg
-//serverid text, serveralias text, serversettings text
-function setvalues(serverid, serveralias, serversettings) {
+function connect() {
     connection.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        connection.query("INSERT INTO servercfg (serverid, serveralias, serversettings) VALUES ("+"'"+serverid+"',"+"'"+serveralias+"',"+"'"+serversettings+"')", function (err, result) {
+    });
+}
 
+//servercfg
+//serverid text, serveralias text, serversettings text
+function setinitvalues(serverid, serveralias, serversettings) {
+        connection.query("INSERT INTO servercfg (serverid, serveralias, serversettings) VALUES ("+"'"+serverid+"',"+"'"+serveralias+"',"+"'"+serversettings+"')", function (err, result) {
             if (err) throw err;
             console.log("1 record inserted");
         });
-    });
 }
 
-function getvalues(serverid) {
-    connection.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        connection.query("SELECT * FROM servercfg WHERE serverid = " + serverid, function (err, result, fields) {
-            if (err) throw err;
-            return result;
+function getsettings(serverid, callback) {
+        connection.query("SELECT * FROM servercfg WHERE serverid = '" + serverid + "'", function (err, result, fields) {
+            if (err) return callback(err);
+            callback(null, result[0].serversettings);
         });
-    });
 }
 
+function setsettings(serverid, serversettings) {
+        connection.query("UPDATE servercfg SET serversettings = '" + serversettings + "' WHERE serverid = '" + serverid + "'", function (err, result) {
+            if (err) throw err;
+            console.log("1 record updated");
+        });
+}
+
+
+module.exports.database={setinitvalues, getsettings, connect, setsettings};
 

@@ -1,5 +1,6 @@
 const { Player } = require('discord-player');
 const { Client, GatewayIntentBits } = require('discord.js');
+const {database} = require("./src/database");
 
 global.client = new Client({
     intents: [
@@ -13,7 +14,7 @@ global.client = new Client({
 });
 
 client.config = require('./config');
-
+database.connect();
 global.player = new Player(client, client.config.opt.discordPlayer);
 
 require('./src/loader');
