@@ -28,16 +28,17 @@ function setinitvalues(serverid, serveralias, serversettings) {
 
 function getsettings(serverid, callback) {
         connection.query("SELECT * FROM servercfg WHERE serverid = '" + serverid + "'", function (err, result, fields) {
-            if (err) return callback(err);
+            if(result[0])
             callback(null, result[0].serversettings);
+            else {
+                setinitvalues(serverid, client.guilds.cache.get(serverid).name, "");
+                callback(null, "setDefault");
+            }
         });
 }
 
 function setsettings(serverid, serversettings) {
-        connection.query("UPDATE servercfg SET serversettings = '" + serversettings + "' WHERE serverid = '" + serverid + "'", function (err, result) {
-            if (err) throw err;
-            console.log("1 record updated");
-        });
+        connection.query("UPDATE servercfg SET serversettings = ? WHERE serverid = ?", [serversettings, serverid]);
 }
 
 

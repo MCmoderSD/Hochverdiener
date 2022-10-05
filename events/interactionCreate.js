@@ -1,4 +1,5 @@
 const { EmbedBuilder, InteractionType } = require('discord.js');
+const {database} = require("../src/database");
 
 module.exports = (client, inter) => {
     if (inter.type === InteractionType.ApplicationCommand) {
@@ -12,7 +13,13 @@ module.exports = (client, inter) => {
 //            if (!inter.member.voice.channel) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription(`❌ | You are not in a Voice Channel`)], ephemeral: true, })
 //            if (inter.guild.members.me.voice.channel && inter.member.voice.channel.id !== inter.guild.members.me.voice.channel.id) return inter.reply({ embeds: [ new EmbedBuilder().setColor('#ff0000').setDescription(`❌ | You are not in the same Voice Channel`)], ephemeral: true, })
        }
-*/      command.execute({ inter, client });
+       */
+        database.getsettings(inter.guild.id, function(err, result) {
+            if(!result.includes(inter.commandName + ";"))
+            command.execute({ inter, client });
+            else inter.reply("Dieser Command ist auf diesem Server blockiert");
+        });
+
     }
     if (inter.type === InteractionType.MessageComponent) {
         const customId = JSON.parse(inter.customId)
