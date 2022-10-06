@@ -3,6 +3,7 @@ const ms = require('ms');
 module.exports = {
     name: 'ping',
     description: "Zeigt dir die Latenz des Bots an",
+    blacklist: false,
     async execute({ client, inter }) {
 
         const m = await inter.reply("Ping?")

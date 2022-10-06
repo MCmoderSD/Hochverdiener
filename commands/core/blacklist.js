@@ -21,19 +21,26 @@ module.exports = {
     ],
 
     execute({client, inter}) {
-        let command = inter.options.getString('command');
-        if (command) switchCommandStatus(client, inter, command, true);
-        else {
-            database.getsettings(inter.guild.id, function (err, result) {
-                if (err) throw err;
-                const row2 = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId("added_blacklistagain").setLabel("Noch Ein Command").setStyle(1), new ButtonBuilder().setCustomId("added_blacklistexit").setLabel("Exit").setStyle(4));
-                const row = new ActionRowBuilder()
-                    .addComponents(
-                        new SelectMenuBuilder()
-                            .setCustomId('added_blacklistselect')
-                            .setPlaceholder('Kein Command Ausgewählt')
-                    );
-                client.commands.map((command) => {
+
+        let role
+        if (inter.member.roles.cache.find(role => role.name === 'Hochverdiener-Admin')) role=true;
+
+        if (role) {
+
+
+            let command = inter.options.getString('command');
+            if (command) switchCommandStatus(client, inter, command, true);
+            else {
+                database.getsettings(inter.guild.id, function (err, result) {
+                    if (err) throw err;
+                    const row2 = new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId("added_blacklistagain").setLabel("Noch Ein Command").setStyle(1), new ButtonBuilder().setCustomId("added_blacklistexit").setLabel("Exit").setStyle(4));
+                    const row = new ActionRowBuilder()
+                        .addComponents(
+                            new SelectMenuBuilder()
+                                .setCustomId('added_blacklistselect')
+                                .setPlaceholder('Kein Command Ausgewählt')
+                        );
+                    client.commands.map((command) => {
 
                     if (command.blacklist || result.includes(command.name + ";")) {
                         let label = command.name;

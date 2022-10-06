@@ -6,6 +6,7 @@ module.exports = {
     name: 'zahl',
     description: 'Ich errate an welche zahl du gedacht hast',
     voiceChannel: false,
+    blacklist: false,
 
     async execute({ inter }) {
         let zahl = random.int(1, 10);

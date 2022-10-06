@@ -5,7 +5,7 @@ module.exports = {
     name: 'dicksize',
     description: 'ich sag dir wie lang dein schwanz ist',
     voiceChannel: false,
-    blacklist: true,
+    blacklist: false,
     options: [
         {
             name: 'user',

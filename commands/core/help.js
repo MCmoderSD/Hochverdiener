@@ -5,6 +5,7 @@ module.exports = {
     description: "Zeigt dir alle Commands",
     showHelp: false,
 
+
     execute({ client, inter }) {
         const commands = client.commands.filter(x => x.showHelp !== false);
 
@@ -12,7 +13,7 @@ module.exports = {
 //        .setColor('#ff0000')
         .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL({ size: 1024, dynamic: true }) })
 //      .setDescription('This code comes from a GitHub project [ZerioDev/Music-bot](https://github.com/ZerioDev/Music-bot).\nThe use of this one is possible while keeping the credits for free.\nIf you want to remove the credits join the Discord support server.')
-        .addFields([ { name: `Versuche einen der ${commands.size} Commands:`, value: commands.map(x => `\`${x.name}\``).join(' | ') } ])
+        .addFields([ { name: `Versuche einen der ${commands.size} Commands:`, value: commands.map(x => `\`${x.name}\``).join(' | ') } ]) // ToDo: Anzeigen der geblacklisteten commands
         .setTimestamp()
 //      .setFooter({ text: 'Music comes first - Made with heart by Zerio ❤️', iconURL: inter.member.avatarURL({ dynamic: true })});
 

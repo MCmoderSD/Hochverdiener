@@ -1,0 +1,18 @@
+const {database} = require("../../src/database");
+
+module.exports = {
+    name: 'test',
+    description: "Enfach zum testen",
+    showHelp: false,
+    execute({ client, inter }) {
+
+        let role
+        if (inter.member.roles.cache.find(role => role.name === 'Developer')) role=true;
+
+        if (role) {
+
+        }
+            console.log(role);
+    },
+};
+
