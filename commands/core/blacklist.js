@@ -27,7 +27,6 @@ module.exports = {
 
         if (role) {
 
-
             let command = inter.options.getString('command');
             if (command) switchCommandStatus(client, inter, command, true);
             else {
