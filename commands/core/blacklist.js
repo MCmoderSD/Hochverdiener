@@ -23,7 +23,7 @@ module.exports = {
     execute({client, inter}) {
 
         let role
-        if (inter.member.roles.cache.find(role => role.name === 'Hochverdiener-Admin')) role=true;
+        if (inter.member.roles.cache.find(role => role.name === 'Hochverdiener-Admin')) role = true;
 
         if (role) {
 
@@ -105,7 +105,7 @@ module.exports = {
             }
         } else {
             inter.reply("Du benötigst die Rolle Hochverdiener-Admin um diesen Command zu nutzen");
-        };
+        }
     }
 };
 
