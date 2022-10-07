@@ -2,6 +2,7 @@ module.exports = {
     name: 'stop',
     description: 'Stoppt alles',
     voiceChannel: true,
+    blacklist: false,
 
     execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

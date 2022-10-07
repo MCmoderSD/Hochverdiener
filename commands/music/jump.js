@@ -4,6 +4,7 @@ module.exports = {
     name: 'jump',
     description: "Springt zur angegebenen Stelle in der Playlist",
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
             name: 'song',

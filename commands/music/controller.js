@@ -4,6 +4,7 @@ module.exports = {
     name: 'controller',
     description: "set controller channel ",
     voiceChannel: false,
+    blacklist: false,
     permissions: PermissionsBitField.Flags.ManageMessages,
     options: [
         {

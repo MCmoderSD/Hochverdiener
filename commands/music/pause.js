@@ -2,6 +2,7 @@ module.exports = {
     name: 'pause',
     description: 'Pausiert den Song',
     voiceChannel: true,
+    blacklist: false,
 
     execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

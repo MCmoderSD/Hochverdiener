@@ -2,6 +2,7 @@ module.exports = {
     name: 'skip',
     description: 'Überspringt den aktuellen Song',
     voiceChannel: true,
+    blacklist: false,
 
     execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

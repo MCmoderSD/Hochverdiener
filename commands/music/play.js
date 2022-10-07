@@ -4,6 +4,7 @@ module.exports = {
     name: 'play',
     description: "Packt einen Song oder eine Playlist in die Warteschlange",
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
             name: 'song',

@@ -5,6 +5,7 @@ module.exports = {
     name: 'seek',
     description: 'Spule vor oder zurück',
     voiceChannel: true,
+    blacklist: false,
     options: [
     {
         name: 'time',

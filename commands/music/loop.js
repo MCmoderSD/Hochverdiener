@@ -4,6 +4,7 @@ module.exports = {
     name: 'loop',
     description: 'Loop an/aus',
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
         name: 'action' ,

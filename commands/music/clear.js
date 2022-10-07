@@ -4,6 +4,7 @@ module.exports = {
     name: 'clear',
     description: 'löscht die Playlist',
     voiceChannel: true,
+    blacklist: false,
 
     async execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

@@ -5,6 +5,7 @@ module.exports = {
     name: 'search',
     description: 'suche nach einem Song',
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
             name: 'song',

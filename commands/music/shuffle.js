@@ -2,6 +2,7 @@ module.exports = {
     name: 'shuffle',
     description: 'Shuffled die Queue',
     voiceChannel: true,
+    blacklist: false,
 
     async execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

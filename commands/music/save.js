@@ -4,6 +4,7 @@ module.exports = {
     name: 'save',
     description: 'Schickt dir Infos zum aktuellen Song in den DMs',
     voiceChannel: true,
+    blacklist: false,
 
     async execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

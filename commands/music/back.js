@@ -4,6 +4,7 @@ module.exports = {
     name: 'back',
     description: "Wieder zurück zum vorherigen Song",
     voiceChannel: true,
+    blacklist: false,
 
     async execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

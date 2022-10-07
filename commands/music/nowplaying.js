@@ -5,6 +5,7 @@ module.exports = {
     name: 'nowplaying',
     description: 'Zeigt den aktuellen Song an',
     voiceChannel: true,
+    blacklist: false,
 
     execute({ inter }) {
         const queue = player.getQueue(inter.guildId);

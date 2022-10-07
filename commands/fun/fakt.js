@@ -4,6 +4,7 @@ module.exports = {
     name: 'fakt',
     description: 'Ich gebe dir ein random Fakt',
     voiceChannel: false,
+    blacklist: true,
 
     async execute({ inter }) {
         const lists = [["10%", "30%", "20%", "99%", "5 von 10 befragten", "60%", "70%", "75%", "420%", "69%", "3 von 99 Befragten", "0%", "100%", "42%", "38%", "93%", "47%", "94%", "29%", "48%", "Niemand", "39%", "3%", "2%", "77%", "2 von 3 Befragten", "9 von 10 Befragten", "85 von 898 Befragten", "83 von 10 Befragen", "23%", "Alle"],

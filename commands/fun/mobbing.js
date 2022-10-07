@@ -6,7 +6,7 @@ module.exports = {
     name: 'mobbing',
     description: 'Mobbt jemanden',
     voiceChannel: false,
-    blacklist: false,
+    blacklist: true,
     options: [
         {
             name: 'user',

@@ -5,6 +5,7 @@ module.exports = {
     name: 'volume',
     description: 'adjust',
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
             name: 'volume',

@@ -5,6 +5,7 @@ module.exports = {
     name: 'playnext',
     description: "song you want to playnext",
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
             name: 'song',

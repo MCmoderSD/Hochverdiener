@@ -4,6 +4,7 @@ module.exports = {
     name: 'help',
     description: "Zeigt dir alle Commands",
     showHelp: false,
+    blacklist: true,
 
 
     execute({ client, inter }) {

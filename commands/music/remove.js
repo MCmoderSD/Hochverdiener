@@ -4,6 +4,7 @@ module.exports = {
     name: 'remove',
     description: "Löscht einen Song aus der Playlist",
     voiceChannel: true,
+    blacklist: false,
     options: [
         {
             name: 'song',
