@@ -4,7 +4,7 @@ module.exports = {
     name: 'iq',
     description: 'Ich mach n IQ Test',
     voiceChannel: false,
-    blacklist: false,
+    blacklist: true,
     options: [
         {
         name: 'user',
