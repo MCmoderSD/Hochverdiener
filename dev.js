@@ -18,5 +18,4 @@ global.player = new Player(client, client.config.opt.discordPlayer);
 
 require('./src/loader');
 require('./src/events');
-
-client.login(client.config.app.devToken);
+client.login(client.config.app.devToken).then(() => console.log('Logged in as Developer: ' + client.user.tag));
