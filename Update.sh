@@ -1,1 +1,1 @@
-git pull --allow-unrelated-histories --global user.name "MCmoderSD"
+git pull https://github.com/MCmoderSD/Hochverdiener.git --allow-unrelated-histories--allow-unrelated-histories --global user.name "MCmoderSD"
