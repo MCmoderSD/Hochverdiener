@@ -25,8 +25,10 @@ module.exports = {
                 return;
             }
             let insults = data.split('\n')
-            let user = inter.options.getUser('user');
-            inter.user.getUser.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", user));
+            let taggedUser = inter.options.getUser('user');
+            inter.taggedUser = taggedUser;
+            //inter.user.getUser.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", user));
+            inter.taggedUser.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", taggedUser));
             console.log(`${inter.member.user.tag} wird gemobbt von ${inter.user.tag}`)
         });
     },
