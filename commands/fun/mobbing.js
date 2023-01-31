@@ -29,7 +29,7 @@ module.exports = {
             inter.taggedUser = taggedUser;
             //inter.user.getUser.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", user));
             inter.taggedUser.send(insults[Math.floor(Math.random() * insults.length)].replaceAll("%member%", taggedUser));
-            console.log(`${inter.member.user.tag} wird gemobbt von ${inter.user.tag}`)
+            console.log(`${inter.taggedUser.tag} wird gemobbt von ${inter.user.tag}`)
         });
     },
 };
