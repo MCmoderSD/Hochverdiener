@@ -1,5 +1,5 @@
 const fs = require('fs');
-const random = require('random');
+require('random');
 const { ApplicationCommandOptionType } = require("discord.js");
 
 module.exports = {
