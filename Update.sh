@@ -1,1 +1,1 @@
-git pull --allow-unrelated-histories
+git pull --allow-unrelated-histories --global user.name "MCmoderSD"
