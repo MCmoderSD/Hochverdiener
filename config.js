@@ -1,8 +1,9 @@
-const {TOKEN}=require("./token.js")
+const {TOKEN, devTOKEN} = require("./token");
 
 module.exports = {
     app: {
         token: TOKEN,
+        devToken: devTOKEN,
         playing: '!help',
         global: true,
         guild: 'Hochverdiener'
