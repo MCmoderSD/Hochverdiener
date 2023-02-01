@@ -17,10 +17,15 @@ public class IQ : BaseCommand
     
     public override Task Execute(SocketSlashCommand command)
     {
-        var taggedUser = (SocketGuildUser) command.Data.Options.First().Value;
+        SocketGuildUser taggedUser;
         SocketUser user = command.User;
-        Console.WriteLine(taggedUser);
-        if(taggedUser != null) user = taggedUser;
+        if (command.Data.Options.First() != null)
+        {
+            taggedUser = (SocketGuildUser) command.Data.Options.First().Value;
+
+        }
+        
+        if(taggedUser != null) user = 
         var iq = new Random().Next(-12, 210);
         command.RespondAsync( user.Mention + " dein IQ ist " + iq);
         Console.WriteLine("IQ Command executed");
