@@ -26,4 +26,8 @@
       <PackageReference Include="Discord.Net.WebSocket" Version="3.9.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="src" />
+    </ItemGroup>
+
 </Project>

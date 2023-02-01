@@ -57,7 +57,9 @@ public class BaseCommand
     
     public static void init()
     {
-        new TestCommand().register();
+        new Dicksize().register();
+        new Fact().register();
+//        new TestCommand().register();
         new IQ().register();
     }
 
