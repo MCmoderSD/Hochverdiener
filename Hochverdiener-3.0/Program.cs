@@ -21,7 +21,7 @@ public class Program
 
         client.Log += Log;
 
-        var token = Token.devToken;
+        var token = Token.devBotCSharp;
         await client.LoginAsync(TokenType.Bot, token);
         await client.StartAsync();
         client.Ready += Client_Ready;

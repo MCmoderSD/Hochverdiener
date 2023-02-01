@@ -44,7 +44,7 @@ public class BaseCommand
             builder.WithDescription(Description);
             builder.WithDefaultMemberPermissions(RequiredPermission);
             builder.WithDMPermission(!ServerOnly);
-            builder.AddOptions(Options);
+            if (Options != null) builder.AddOptions(Options);
             Program.client.CreateGlobalApplicationCommandAsync(builder.Build());
         }
         Commands.Add(this);
