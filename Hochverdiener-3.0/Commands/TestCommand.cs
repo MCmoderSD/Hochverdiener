@@ -4,7 +4,12 @@ namespace Hochverdiener_3._0.Commands;
 
 public class TestCommand : BaseCommand
 {
-    public TestCommand() : base("TestCommand", null, "Dies ist nur ein Test Command", null, null)
+    public TestCommand() : base(
+        "TestCommand", 
+        null, 
+        "Dies ist nur ein Test Command", 
+        null, 
+        null)
     {
         
     }
