@@ -10,22 +10,7 @@ public class IQ : BaseCommand
         "IQ", 
         null, 
         "Misst den IQ eines Users", 
-        options: new SlashCommandOptionBuilder[] {new SlashCommandOptionBuilder
-        {
-            Name = null,
-            Description = null,
-            Type = (ApplicationCommandOptionType)0,
-            IsDefault = null,
-            IsRequired = null,
-            IsAutocomplete = true,
-            MinValue = null,
-            MaxValue = null,
-            MinLength = null,
-            MaxLength = null,
-            Choices = null,
-            Options = null,
-            ChannelTypes = null
-        }.WithName("User").WithDescription("User den du testen willst").WithType(ApplicationCommandOptionType.User).WithRequired(false)},
+        options: new[] {new SlashCommandOptionBuilder().WithName("user").WithDescription("User den du testen willst").WithType(ApplicationCommandOptionType.User).WithRequired(false)},
             null)
     {
         SlashCommandOptionBuilder option = new SlashCommandOptionBuilder();
@@ -33,11 +18,13 @@ public class IQ : BaseCommand
     
     public override Task Execute(SocketSlashCommand command)
     {
-        var taggedUser = command.Data.Options.ToString();
+        var taggedUser = (SocketGuildUser) command.Data.Options.First().Value;
+        SocketUser user = command.User;
+        Console.WriteLine(taggedUser);
+        if(taggedUser != null) user = taggedUser;
         var iq = new Random().Next(-12, 210);
-        var user = Methods.ReplyToUserTag(command);
-        command.RespondAsync( user + " dein IQ ist " + iq);
-        Console.Write(taggedUser);
+        command.RespondAsync( user.Mention + " dein IQ ist " + iq);
+        Console.Write(user.Username);
         Console.WriteLine("IQ Command executed");
         return base.Execute(command);
     }
