@@ -24,7 +24,7 @@ public class BaseCommand
         ServerOnly = serverOnly;
     }
 
-    public void register()
+    public void Register()
     {
         string[] finalCommands = new string[1];
         if (Aliases != null)
@@ -45,22 +45,28 @@ public class BaseCommand
             builder.WithDefaultMemberPermissions(RequiredPermission);
             builder.WithDMPermission(!ServerOnly);
             if (Options != null) builder.AddOptions(Options);
-            Program.client.CreateGlobalApplicationCommandAsync(builder.Build());
+            Program.Client?.CreateGlobalApplicationCommandAsync(builder.Build());
         }
         Commands.Add(this);
     }
     
     public virtual Task Execute(SocketSlashCommand command)
     {
+        //ToDo Logging Feature
         return Task.CompletedTask;
     }
     
-    public static void init()
+    public static void Init()
     {
-        new Dicksize().register();
-        new Fact().register();
-//        new TestCommand().register();
-        new IQ().register();
+        new Dicksize().Register();
+        new Fact().Register();
+        new Insult().Register();
+        new IQ().Register();
+        new Joke().Register();
+        new Mobbing().Register();
+        new SexistScore().Register();
+        new Zahl().Register();
+        new TestCommand().Register();
     }
 
 }

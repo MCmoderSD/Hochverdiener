@@ -18,10 +18,6 @@ public class Joke : BaseCommand
     public override Task Execute(SocketSlashCommand command)
     {
         command.RespondAsync(ReadJokes()[new Random().Next(0, ReadJokes().Length)]);
-        for (int i = 0; i < ReadJokes().Length; i++)
-        {
-            Console.WriteLine(ReadJokes()[i]);
-        }
         return base.Execute(command);
     }
     private string[] ReadJokes()
@@ -36,7 +32,7 @@ public class Joke : BaseCommand
                     string[] jokes = result.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
                     return jokes;
                 }
-        
-        return new string[0];
+
+        return Array.Empty<string>();
     }
 }

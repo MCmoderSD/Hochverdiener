@@ -5,13 +5,13 @@ using Discord.WebSocket;
 
 namespace Hochverdiener_3._0.Commands;
 
-public class Insult : BaseCommand
+public class Mobbing : BaseCommand
 {
-    public Insult() : base(
-        name: "Insult", 
+    public Mobbing() : base(
+        name: "Mobbing", 
         aliases: null, 
-        description: "Ich beleidige einen User", 
-        options: new[] {new SlashCommandOptionBuilder().WithName("user").WithDescription("welchen User ich beleidigen soll").WithType(ApplicationCommandOptionType.User).WithRequired(false)},
+        description: "Ich mobbe einen User", 
+        options: new[] {new SlashCommandOptionBuilder().WithName("user").WithDescription("wer wird das mobbing Opfer?").WithType(ApplicationCommandOptionType.User).WithRequired(true)},
         permission: null)
     {
     }
@@ -20,7 +20,7 @@ public class Insult : BaseCommand
     {
         SocketUser user = command.User;
         if(command.Data.Options.Count > 0) user = (SocketUser) command.Data.Options.First().Value;
-        command.RespondAsync(ReadInsults()[new Random().Next(0, ReadInsults().Length)].Replace("%member%", user.Mention));
+        user.SendMessageAsync(ReadInsults()[new Random().Next(0, ReadInsults().Length)].Replace("%member%", user.Mention));
         return base.Execute(command);
     }
     private string[] ReadInsults()
