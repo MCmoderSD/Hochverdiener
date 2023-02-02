@@ -16,9 +16,8 @@ public class Dicksize : BaseCommand
     
     public override Task Execute(SocketSlashCommand command)
     {
-        var taggedUser = (SocketGuildUser) command.Data.Options.First().Value;
         SocketUser user = command.User;
-        if(taggedUser != null) user = taggedUser;
+        if(command.Data.Options.Count > 0) user = (SocketUser) command.Data.Options.First().Value;
         string[] dickWords =
         {
             "Dick", "Schwanz", "Schlauch", "Gartenschlauch", "Rohr", "Stahlrohr", "Aubergine", "🍆", "Lulu", "Cöck",
@@ -28,7 +27,6 @@ public class Dicksize : BaseCommand
         };
         int laenge = new Random().Next(-3, 32), breite = new Random().Next(1, 7);
         command.RespondAsync(user.Mention + "'s " + dickWords[new Random().Next(0, dickWords.Length)] + " ist " + laenge + "cm lang und " + breite + "cm breit 🍆");
-        Console.WriteLine("Dicksize Command executed");
         return base.Execute(command);
     }
 }

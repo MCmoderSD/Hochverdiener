@@ -59,8 +59,10 @@ public class BaseCommand
     {
         new Dicksize().register();
         new Fact().register();
-//        new TestCommand().register();
+        new Insult().register();
         new IQ().register();
+        new Joke().register();
+//        new TestCommand().register();
     }
 
 }

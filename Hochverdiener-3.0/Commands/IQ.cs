@@ -7,13 +7,13 @@ namespace Hochverdiener_3._0.Commands;
 public class IQ : BaseCommand
 {
     public IQ() : base(
-        "IQ", 
-        null, 
-        "Misst den IQ eines Users", 
-        options: new[] {new SlashCommandOptionBuilder().WithName("user").WithDescription("User den du testen willst").WithType(ApplicationCommandOptionType.User).WithRequired(false)},
-            null)
+        name: "IQ", 
+        aliases: null, 
+        description: "Misst den IQ eines Users", 
+        options: new[] {new SlashCommandOptionBuilder().WithName("user").WithDescription("User den du testen willst").WithType(ApplicationCommandOptionType.User).WithRequired(false)}, 
+        permission: null)
     {
-        SlashCommandOptionBuilder option = new SlashCommandOptionBuilder();
+        
     }
     
     public override Task Execute(SocketSlashCommand command)
@@ -22,8 +22,6 @@ public class IQ : BaseCommand
         if(command.Data.Options.Count > 0) user = (SocketUser) command.Data.Options.First().Value;
         var iq = new Random().Next(-12, 210);
         command.RespondAsync( user.Mention + " dein IQ ist " + iq);
-        Console.Write(user.Username);
-        Console.WriteLine("IQ Command executed");
         return base.Execute(command);
     }
 }
