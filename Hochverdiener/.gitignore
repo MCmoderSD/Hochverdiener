@@ -1,4 +1,7 @@
-﻿keys/
+﻿.gitignore
+.idea/
+.git/
+keys/
 exe.lnk
 keys/InviteLinks.cs
 keys/OpenAI-API-Key.cs

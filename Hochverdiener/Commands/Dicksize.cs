@@ -1,7 +1,8 @@
 ﻿using Discord;
 using Discord.WebSocket;
+using Hochverdiener_3._0;
 
-namespace Hochverdiener_3._0.Commands;
+namespace Hochverdiener._0.Commands;
 
 public class Dicksize : BaseCommand
 {
