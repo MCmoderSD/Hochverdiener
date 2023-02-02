@@ -3,6 +3,7 @@
 .git/
 bin/
 keys/
+obj/
 Output.lnk
 keys/InviteLinks.cs
 keys/OpenAI-API-Keys.cs
