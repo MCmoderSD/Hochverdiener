@@ -27,10 +27,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="src" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove="Content\insults.txt" />
       <EmbeddedResource Include="Content\insults.txt" />
       <None Remove="Content\jokes.txt" />
