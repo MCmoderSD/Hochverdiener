@@ -17,23 +17,26 @@ public class Joke : BaseCommand
     
     public override Task Execute(SocketSlashCommand command)
     {
-        command.RespondAsync(readJokes()[new Random().Next(0, readJokes().Length)]);
-        for (int i = 0; i < readJokes().Length; i++)
+        command.RespondAsync(ReadJokes()[new Random().Next(0, ReadJokes().Length)]);
+        for (int i = 0; i < ReadJokes().Length; i++)
         {
-            Console.WriteLine(readJokes()[i]);
+            Console.WriteLine(ReadJokes()[i]);
         }
         return base.Execute(command);
     }
-    private string[] readJokes()
+    private string[] ReadJokes()
     {
         Assembly assembly = Assembly.GetExecutingAssembly();
-        string resourceName = "Hochverdiener-3.0.Content.jokes.txt";
+        string resourceName = "Hochverdiener_3._0.Content.jokes.txt";
         using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
-        using (StreamReader reader = new StreamReader(stream))
-        {
-            string result = reader.ReadToEnd();
-            string[] jokes = result.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-            return jokes;
-        }
+            if (stream != null)
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    string result = reader.ReadToEnd();
+                    string[] jokes = result.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                    return jokes;
+                }
+        
+        return new string[0];
     }
 }
