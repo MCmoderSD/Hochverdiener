@@ -67,10 +67,10 @@ public class Fact : BaseCommand
             "Schokoladenfondeubrunnen", "Kekse", "Oberleitungen", "Hunde", "Katzen", "Anzüge", "Senioren", "Stühle",
             "Xylophone", "Klaviere", "Kondome", "Kiffer"
         };
-        Random Random = new();
-        string Fact = array1[Random.Next(0, array1.Length)] + " " + array2[Random.Next(0, array2.Length)] + " " +
-                      array3[Random.Next(0, array3.Length)] + " " + array4[Random.Next(0, array4.Length)] + " " +
-                      array5[Random.Next(0, array5.Length)] + " " + array6[Random.Next(0, array6.Length)];
-        return Fact;
+        Random random = new();
+        string fact = array1[random.Next(0, array1.Length)] + " " + array2[random.Next(0, array2.Length)] + " " +
+                      array3[random.Next(0, array3.Length)] + " " + array4[random.Next(0, array4.Length)] + " " +
+                      array5[random.Next(0, array5.Length)] + " " + array6[random.Next(0, array6.Length)];
+        return fact;
     }
 }
