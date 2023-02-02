@@ -1,4 +1,4 @@
-﻿namespace Hochverdiener._0.Commands;
+﻿namespace Hochverdiener.Commands;
 
 public class ChatGPT
 {

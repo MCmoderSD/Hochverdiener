@@ -1,8 +1,8 @@
 ﻿using Discord;
 using Discord.WebSocket;
-using Hochverdiener._0.Commands;
+using Hochverdiener.Commands;
 
-namespace Hochverdiener_3._0;
+namespace Hochverdiener;
 
 public class BaseCommand
 {

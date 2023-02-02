@@ -1,9 +1,8 @@
 ﻿using System.Reflection;
 using Discord;
 using Discord.WebSocket;
-using Hochverdiener_3._0;
 
-namespace Hochverdiener._0.Commands;
+namespace Hochverdiener.Commands;
 
 public class Mobbing : BaseCommand
 {
@@ -26,7 +25,7 @@ public class Mobbing : BaseCommand
     private string[] ReadInsults()
     {
         Assembly assembly = Assembly.GetExecutingAssembly();
-        string resourceName = "Hochverdiener_3._0.Content.insults.txt";
+        string resourceName = "Hochverdiener.Content.insults.txt";
         using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
             if (stream != null)
                 using (StreamReader reader = new StreamReader(stream))

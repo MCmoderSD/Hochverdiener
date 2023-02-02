@@ -1,7 +1,7 @@
 ﻿using Discord.WebSocket;
-using Hochverdiener_3._0;
+using Hochverdiener;
 
-namespace Hochverdiener._0.Commands;
+namespace Hochverdiener.Commands;
 
 public class Fact : BaseCommand
 {

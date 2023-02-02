@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 using Discord.WebSocket;
-using Hochverdiener_3._0;
+using Hochverdiener;
 
-namespace Hochverdiener._0.Commands;
+namespace Hochverdiener.Commands;
 
 public class Joke : BaseCommand
 {
@@ -24,7 +24,7 @@ public class Joke : BaseCommand
     private string[] ReadJokes()
     {
         Assembly assembly = Assembly.GetExecutingAssembly();
-        string resourceName = "Hochverdiener_3._0.Content.jokes.txt";
+        string resourceName = "Hochverdiener.Content.jokes.txt";
         using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
             if (stream != null)
                 using (StreamReader reader = new StreamReader(stream))
