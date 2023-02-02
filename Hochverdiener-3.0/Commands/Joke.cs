@@ -18,33 +18,22 @@ public class Joke : BaseCommand
     public override Task Execute(SocketSlashCommand command)
     {
         command.RespondAsync(readJokes()[new Random().Next(0, readJokes().Length)]);
+        for (int i = 0; i < readJokes().Length; i++)
+        {
+            Console.WriteLine(readJokes()[i]);
+        }
         return base.Execute(command);
     }
     private string[] readJokes()
     {
         Assembly assembly = Assembly.GetExecutingAssembly();
-        string resourceName = "ReadLinesFromEmbeddedResource.Content.jokes.txt";
-        using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+        string resourceName = "Hochverdiener-3.0.Content.jokes.txt";
+        using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
         using (StreamReader reader = new StreamReader(stream))
         {
-            string[] lines = new string[1];
-            int lineCount = 0;
-            string line;
-            while ((line = reader.ReadLine()) != null)
-            {
-                if (lineCount == lines.Length)
-                {
-                    Array.Resize(ref lines, lines.Length * 2);
-                }
-                lines[lineCount++] = line;
-            }
-            Array.Resize(ref lines, lineCount);
-            foreach (string currentLine in lines)
-            {
-                Console.WriteLine(currentLine);
-            }
+            string result = reader.ReadToEnd();
+            string[] jokes = result.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            return jokes;
         }
-        string[] jokes = File.ReadAllLines("jokes.txt");
-        return jokes;
     }
 }
