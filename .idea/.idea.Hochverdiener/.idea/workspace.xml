@@ -4,27 +4,7 @@
     <projectFile>Hochverdiener/Hochverdiener.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hochverdiener/Output.lnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/ChatGPT.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Dicksize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Dicksize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Fact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Fact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/IQ.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/IQ.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Insult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Insult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Joke.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Joke.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Mobbing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Mobbing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/SexistScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/SexistScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/TestCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/TestCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Zahl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Zahl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/start.sh" beforeDir="false" />
-    </list>
+    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,8 +75,16 @@
       <workItem from="1675364425388" duration="829000" />
       <workItem from="1675366358118" duration="135000" />
       <workItem from="1675366931907" duration="22000" />
-      <workItem from="1675367221151" duration="502000" />
+      <workItem from="1675367221151" duration="543000" />
     </task>
+    <task id="LOCAL-00001" summary="migration finished">
+      <created>1675367769025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675367769025</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +95,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="migration finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="migration finished" />
   </component>
 </project>
