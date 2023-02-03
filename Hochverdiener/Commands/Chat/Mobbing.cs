@@ -2,7 +2,7 @@
 using Discord;
 using Discord.WebSocket;
 
-namespace Hochverdiener.Commands;
+namespace Hochverdiener.Commands.Chat;
 
 public class Mobbing : BaseCommand
 {

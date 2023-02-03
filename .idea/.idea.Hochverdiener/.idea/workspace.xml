@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/src/YouTubeEngine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/ChatGPT.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Dicksize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Dicksize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Fact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Fact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/IQ.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/IQ.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Insult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Insult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Joke.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Joke.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Mobbing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Mobbing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/SexistScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/SexistScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/TestCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/TestCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Zahl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Zahl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +31,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
   <component name="ProjectId" id="2LC9uxHtPSG7sLWzcipRaxn7Ued" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -24,29 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "v3",
-    "ignore.virus.scanning.warn.message": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\MCmoderSD\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\MCmoderSD\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Hochverdiener" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -80,6 +98,8 @@
       <workItem from="1675366931907" duration="22000" />
       <workItem from="1675367221151" duration="543000" />
       <workItem from="1675368115961" duration="2185000" />
+      <workItem from="1675375590791" duration="267000" />
+      <workItem from="1675433816253" duration="690000" />
     </task>
     <task id="LOCAL-00001" summary="migration finished">
       <created>1675367769025</created>
@@ -102,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675370183444</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".gitignore">
+      <created>1675375853438</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675375853438</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +142,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="migration finished" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
   </component>
 </project>

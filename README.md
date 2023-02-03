@@ -38,67 +38,16 @@ public class Token
 7. The exe and dll  files are located in the bin folder of the project.
 
 If you want you can create own Commands inside the **Commands** folder.<br>
-To enable them you need to add them to **BaseCommand.cs** in the **src** folder.<br>
+To enable them you need to add them at the bottom of **BaseCommand.cs** which is located in the **src** folder.<br>
 ```csharp
-using Discord;
-using Discord.WebSocket;
-using Hochverdiener.Commands;
-
-namespace Hochverdiener;
-
-public class BaseCommand
-{
-    public static List<BaseCommand> Commands = new();
-    public string Name { get; }
-    public string[]? Aliases { get; }
-    public string Description { get; }
-     private bool ServerOnly { get; }
-     private GuildPermission? RequiredPermission { get; }
-     private SlashCommandOptionBuilder[]? Options { get; }
-    
-    public BaseCommand(string name,string[]? aliases, string description, SlashCommandOptionBuilder[]? options,GuildPermission? permission, bool serverOnly = false)
+public static void Init()
     {
-        Options = options;
-        RequiredPermission = permission;
-        Aliases = aliases;
-        Name = name.ToLower();
-        Description = description;
-        ServerOnly = serverOnly;
+        InitChatCommands();
+        InitMusicCommands();
+        new TestCommand().Register();
     }
 
-    public void Register()
-    {
-        string[] finalCommands = new string[1];
-        if (Aliases != null)
-        {
-            finalCommands = new string[Aliases.Length + 1];
-            for (int i = 0; i < Aliases.Length; i++)
-            {
-                finalCommands[i + 1] = Aliases[i];
-            }
-        }
-
-        finalCommands[0] = Name;
-        foreach (var command in finalCommands)
-        {
-            var builder = new SlashCommandBuilder();
-            builder.WithName(command);
-            builder.WithDescription(Description);
-            builder.WithDefaultMemberPermissions(RequiredPermission);
-            builder.WithDMPermission(!ServerOnly);
-            if (Options != null) builder.AddOptions(Options);
-            Program.Client?.CreateGlobalApplicationCommandAsync(builder.Build());
-        }
-        Commands.Add(this);
-    }
-    
-    public virtual Task Execute(SocketSlashCommand command)
-    {
-        //ToDo Logging Feature
-        return Task.CompletedTask;
-    }
-    
-    public static void Init()
+    public static void InitChatCommands()
     {
         new Dicksize().Register();
         new Fact().Register();
@@ -108,8 +57,9 @@ public class BaseCommand
         new Mobbing().Register();
         new SexistScore().Register();
         new Zahl().Register();
-        new YOUR_COMMAND_CLASS_NAME().Register()    <---ADD THEM HERE
-        new TestCommand().Register();   
     }
-}
+    public static void InitMusicCommands()
+    {
+        new Play();
+    }
 ```

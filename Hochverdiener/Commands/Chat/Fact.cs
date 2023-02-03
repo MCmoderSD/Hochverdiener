@@ -1,7 +1,6 @@
 ﻿using Discord.WebSocket;
-using Hochverdiener;
 
-namespace Hochverdiener.Commands;
+namespace Hochverdiener.Commands.Chat;
 
 public class Fact : BaseCommand
 {
