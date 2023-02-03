@@ -77,6 +77,6 @@ public class BaseCommand
     }
     public static void InitMusicCommands()
     {
-        new Play();
+        new Play().Register();
     }
 }

@@ -4,35 +4,27 @@
     <projectFile>Hochverdiener/Hochverdiener.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/src/YouTubeEngine.cs" afterDir="false" />
+    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="Cleanup &amp; Restructure">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/ChatGPT.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Dicksize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Dicksize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Fact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Fact.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/IQ.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/IQ.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Insult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Insult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Joke.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Joke.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Mobbing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Mobbing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/SexistScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/SexistScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/TestCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/TestCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Zahl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/Zahl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Music/src/YouTubeEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/src/YouTubeEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/MCmoderSD/RiderProjects/Hochverdiener/Hochverdiener/src/BaseCommand.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2LC9uxHtPSG7sLWzcipRaxn7Ued" />
   <component name="ProjectLevelVcsManager">
@@ -99,7 +91,7 @@
       <workItem from="1675367221151" duration="543000" />
       <workItem from="1675368115961" duration="2185000" />
       <workItem from="1675375590791" duration="267000" />
-      <workItem from="1675433816253" duration="690000" />
+      <workItem from="1675433816253" duration="1930000" />
     </task>
     <task id="LOCAL-00001" summary="migration finished">
       <created>1675367769025</created>
@@ -129,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675375853438</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cleanup &amp; Restructure">
+      <created>1675434923286</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675434923286</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +142,7 @@
     <MESSAGE value="migration finished" />
     <MESSAGE value="README.md" />
     <MESSAGE value=".gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+    <MESSAGE value="Cleanup &amp; Restructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup &amp; Restructure" />
   </component>
 </project>

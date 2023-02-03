@@ -19,7 +19,7 @@ You can add the bot to your server: [Click Here](https://discord.com/api/oauth2/
 - Music
 ## Installation
 If you want to host your own bot you need to perform the following steps:
-1. Clone the repository into a IDE that supports C# and .NET 7.0 I recommend [JetBrains Rider](https://www.jetbrains.com/rider/).
+1. Clone the repository into a IDE that supports C# and [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) I recommend [JetBrains Rider](https://www.jetbrains.com/rider/).
 2. Create a folder called **keys** in the root directory of the project.
 3. in the **keys** folder create C# class called **Tokens.cs** and paste your bot token in it.
 4. in the class add the following code:
