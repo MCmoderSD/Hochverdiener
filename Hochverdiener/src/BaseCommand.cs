@@ -66,6 +66,7 @@ public class BaseCommand
 
     public static void InitChatCommands()
     {
+        new ChatGPT().Register();
         new Dicksize().Register();
         new Fact().Register();
         new Insult().Register();
