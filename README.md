@@ -21,19 +21,27 @@ You can add the bot to your server: [Click Here](https://discord.com/api/oauth2/
 If you want to host your own bot you need to perform the following steps:
 1. Clone the repository into a IDE that supports C# and [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) I recommend [JetBrains Rider](https://www.jetbrains.com/rider/).
 2. Create a folder called **keys** in the root directory of the project.
-3. in the **keys** folder create C# class called **Tokens.cs** and paste your bot token in it.
+3. in the **keys** folder create C# class called **Keys.cs** and paste your bot token in it. For the OpenAI API Key you need to create an account on [OpenAI](https://openai.com/) and create a new API Key. And you need to create a YouTube API Key. [Click Here](https://developers.google.com/youtube/v3/getting-started) for more information.
 4. in the class add the following code:
 ```csharp
 namespace Hochverdiener.keys;
 
-public class Token
+public class Keys
 {
-    public static readonly string token = "PUT_YOUR_TOKEN_HERE";
-    public static readonly string devToken = "PUT_YOUR_TOKEN_HERE";
-    public static readonly string devBotCSharp = "PUT_YOUR_TOKEN_HERE";
+    // OpenAI API Key:
+    public static readonly string OpenAiApiKey = "YOUR_API_KEY";
+    
+    // Discord Tokens:
+    public static readonly string hochverdienerToken = "PUT_YOUR_BOT_TOKEN_HERE";
+    public static readonly string testBotBenToken = "PUT_YOUR_BOT_TOKEN_HERE";
+    public static readonly string testBotBenCSharpToken = "PUT_YOUR_BOT_TOKEN_HERE";
+    
+    
+    // YouTube API Key:
+    public static readonly string YouTubeApiKey = "YOUR_API_KEY";
 }
 ```
-5. Make sure to replace the ``PUT_YOUR_TOKEN_HERE`` with your bot token.
+5. Make sure to replace the ``PUT_YOUR_BOT_TOKEN_HERE`` with your bot token.
 6. Run the project and the bot should be online.
 7. The exe and dll  files are located in the bin folder of the project.
 

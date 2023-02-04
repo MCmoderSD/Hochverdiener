@@ -4,6 +4,9 @@ using Discord.WebSocket;
 using Newtonsoft.Json;
 using System.Text.Json;
 using Hochverdiener.keys;
+using OpenAI_API;
+using OpenAI_API.Completions;
+using OpenAI_API.Models;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Hochverdiener.Commands.Chat;
@@ -26,15 +29,12 @@ public class ChatGPT : BaseCommand
         command.RespondAsync(AskChatGPT(question));
         return base.Execute(command);
     }
-
+//ToDo Fix this
     private string AskChatGPT(string? question)
     {
-        using (var client = new HttpClient())
-        {
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + OpenAI_API_Keys.OpenAiApiKey);
-            var content = new StringContent(JsonSerializer.Serialize(new { prompt = question }), Encoding.UTF8, "application/json");
-            var response = client.PostAsync("https://api.openai.com/v1/engines/text-davinci/jobs", content).Result;
-            return response.Content.ReadAsStringAsync().Result;
-        }
+        var api = new OpenAIAPI(Keys.OpenAiApiKey);
+        var result = api.Completions.GetCompletion(question);
+        Console.WriteLine(result.Result);
+        return result.Result;
     }
 }

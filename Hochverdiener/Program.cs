@@ -22,7 +22,7 @@ namespace Hochverdiener
 
             Client.Log += Log;
 
-            var token = Token.devBotCSharp;
+            var token = Keys.testBotBenCSharpToken;
             await Client.LoginAsync(TokenType.Bot, token);
             await Client.StartAsync();
             Client.Ready += Client_Ready;

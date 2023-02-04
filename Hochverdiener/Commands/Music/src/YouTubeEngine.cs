@@ -10,7 +10,7 @@ public class YouTubeEngine
     {
         var youtubeService = new YouTubeService(new BaseClientService.Initializer
         {
-            ApiKey = keys.YouTube_API_Key.YouTubeApiKey,
+            ApiKey = keys.Keys.YouTubeApiKey,
             ApplicationName = "SongSearchEngine"
         });
 
