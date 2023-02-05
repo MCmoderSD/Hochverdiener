@@ -1,6 +1,7 @@
 ﻿using Discord;
 using Discord.WebSocket;
-using Hochverdiener.Commands;
+using Hochverdiener.Commands.Chat;
+using Hochverdiener.Commands.Music;
 
 namespace Hochverdiener;
 
@@ -58,6 +59,14 @@ public class BaseCommand
     
     public static void Init()
     {
+        InitChatCommands();
+        InitMusicCommands();
+        new TestCommand().Register();
+    }
+
+    public static void InitChatCommands()
+    {
+        new ChatGPT().Register();
         new Dicksize().Register();
         new Fact().Register();
         new Insult().Register();
@@ -66,7 +75,9 @@ public class BaseCommand
         new Mobbing().Register();
         new SexistScore().Register();
         new Zahl().Register();
-        new TestCommand().Register();
     }
-
+    public static void InitMusicCommands()
+    {
+        new Play().Register();
+    }
 }

@@ -1,8 +1,7 @@
 ﻿using Discord;
 using Discord.WebSocket;
-using Hochverdiener;
 
-namespace Hochverdiener.Commands;
+namespace Hochverdiener.Commands.Chat;
 
 public class IQ : BaseCommand
 {
