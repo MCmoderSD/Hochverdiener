@@ -33,7 +33,7 @@ public class ChatGPT : BaseCommand
     {
         var api = new OpenAIAPI(Keys.OpenAiApiKey);
         var result =
-            api.Completions.CreateAndFormatCompletion(new CompletionRequest(question, model: Model.AdaText, temperature: 0.1));
+            api.Completions.CreateAndFormatCompletion(new CompletionRequest(question, model: Model.DavinciText, temperature: 0.1));
         var res = result.Result;
         Console.WriteLine(res);
         return res;
