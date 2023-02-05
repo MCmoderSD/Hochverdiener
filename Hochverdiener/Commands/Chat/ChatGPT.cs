@@ -17,7 +17,7 @@ public class ChatGPT : BaseCommand
         name: "ChatGPT", 
         aliases: null, 
         description: "Ich beantworte deine Fragen mithilfe meines HochverdienerIQ's",
-        options: new[] {new SlashCommandOptionBuilder().WithName("question").WithDescription("Frage die du stellen willst").WithType(ApplicationCommandOptionType.String).WithRequired(true), new SlashCommandOptionBuilder().WithName("questionquality").WithDescription("Schnell generiert oder langsam aber besser").WithRequired(true).WithType(ApplicationCommandOptionType.String).AddChoice("Schnell", "ada").AddChoice("Langsam", "davinci")},
+        options: new[] {new SlashCommandOptionBuilder().WithName("question").WithDescription("Frage die du stellen willst").WithType(ApplicationCommandOptionType.String).WithRequired(true), new SlashCommandOptionBuilder().WithName("questionquality").WithDescription("Schnell generiert oder langsam aber besser").WithRequired(true).WithType(ApplicationCommandOptionType.String).AddChoice("Schnell", "ada").AddChoice("Qualitativ", "davinci")},
         permission: null)
     {
         
@@ -25,19 +25,26 @@ public class ChatGPT : BaseCommand
     
     public override Task Execute(SocketSlashCommand command)
     {
-        Model model = command.Data.Options.Last().Value.ToString() == "ada" ? Model.AdaText : Model.DavinciText;
+       
         var question = command.Data.Options.First().Value.ToString();
-        command.RespondAsync(AskChatGPT(question,model));
+        command.RespondAsync(AskChatGPT(question,command.Data.Options.Last().Value.ToString()));
         return base.Execute(command);
     }
-    private string AskChatGPT(string? question, Model model)
+    private string AskChatGPT(string? question, string model_name)
     {
         //TODO: Conversations
+        Model model;
         string key;
-        if(model == Model.AdaText)
+        if (model_name == "ada")
+        {
             key = Keys.OpenAiApiKeyAdaText;
+            model = Model.BabbageText;
+        }
         else
+        {
             key = Keys.OpenAiApiKeyDavinciText;
+            model = Model.DavinciText;
+        }
         var api = new OpenAIAPI(key);
         var result =
             api.Completions.CreateAndFormatCompletion(new CompletionRequest(question, model: model, temperature: 0.1));

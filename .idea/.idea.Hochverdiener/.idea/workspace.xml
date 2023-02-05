@@ -4,8 +4,7 @@
     <projectFile>Hochverdiener/Hochverdiener.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="changed to davinci">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="added Ada / Davinci GPT option">
       <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -96,7 +96,7 @@
       <workItem from="1675520819964" duration="2154000" />
       <workItem from="1675523107298" duration="10000" />
       <workItem from="1675523480017" duration="49000" />
-      <workItem from="1675622695361" duration="3376000" />
+      <workItem from="1675622695361" duration="3700000" />
     </task>
     <task id="LOCAL-00001" summary="migration finished">
       <created>1675367769025</created>
@@ -182,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675625494578</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added Ada / Davinci GPT option">
+      <created>1675626288317</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675626288317</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +211,7 @@
     <MESSAGE value="fixed ChatGPT.cs just need money geringverdiener" />
     <MESSAGE value="added command logginh" />
     <MESSAGE value="changed to davinci" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed to davinci" />
+    <MESSAGE value="added Ada / Davinci GPT option" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Ada / Davinci GPT option" />
   </component>
 </project>
