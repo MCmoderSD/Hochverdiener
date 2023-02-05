@@ -4,12 +4,9 @@
     <projectFile>Hochverdiener/Hochverdiener.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="fixed ChatGPT.cs just need money geringverdiener">
-      <change afterPath="$PROJECT_DIR$/Hochverdiener/src/Logger.cs" afterDir="false" />
+    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="changed to davinci">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener.sln.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/src/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/BaseCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -98,7 +96,7 @@
       <workItem from="1675520819964" duration="2154000" />
       <workItem from="1675523107298" duration="10000" />
       <workItem from="1675523480017" duration="49000" />
-      <workItem from="1675622695361" duration="2498000" />
+      <workItem from="1675622695361" duration="3376000" />
     </task>
     <task id="LOCAL-00001" summary="migration finished">
       <created>1675367769025</created>
@@ -170,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675624207121</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added command logginh">
+      <created>1675625426419</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675625426419</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changed to davinci">
+      <created>1675625494578</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675625494578</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +202,8 @@
     <MESSAGE value="push" />
     <MESSAGE value="removed upload" />
     <MESSAGE value="fixed ChatGPT.cs just need money geringverdiener" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ChatGPT.cs just need money geringverdiener" />
+    <MESSAGE value="added command logginh" />
+    <MESSAGE value="changed to davinci" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to davinci" />
   </component>
 </project>
