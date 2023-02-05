@@ -53,7 +53,7 @@ public class BaseCommand
     
     public virtual Task Execute(SocketSlashCommand command)
     {
-        //ToDo Logging Feature
+        Logger.Log("Command executed: " + command.Data.Name + " by " + command.User.Username + "#" + command.User.Discriminator + " with parameters " + command.Data.Options.Select(x => x.Name + ": " + x.Value).Aggregate((x, y) => x + ", " + y) + "");
         return Task.CompletedTask;
     }
     

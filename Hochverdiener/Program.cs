@@ -4,9 +4,23 @@ using Hochverdiener.keys;
 
 namespace Hochverdiener
 {
-    public class Program
-    {
-        public static Task Main(string[] args) => new Program().MainAsync();
+    public class Program {
+        public static string LOGFOLDER { get; set; } = "";
+
+    public static Task Main(string[] args)
+        {
+            LOGFOLDER = args[0];
+            if (LOGFOLDER == "")
+            {
+                Console.WriteLine("No Log Folder specified");
+                return Task.CompletedTask;
+            }
+            var logDir = Directory.CreateDirectory(LOGFOLDER);
+            Console.WriteLine("Log Folder: " + logDir.FullName);
+            var logger = new Logger(logDir);
+            return new Program().MainAsync();
+        }
+
         public static DiscordSocketClient? Client;
 
         private Task Log(LogMessage msg)
