@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="added Ada / Davinci GPT option">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -26,6 +26,7 @@
   </component>
   <component name="ProjectId" id="2LC9uxHtPSG7sLWzcipRaxn7Ued" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -49,9 +50,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\timon\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\timon\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\timon\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\MCmoderSD\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -97,6 +98,7 @@
       <workItem from="1675523107298" duration="10000" />
       <workItem from="1675523480017" duration="49000" />
       <workItem from="1675622695361" duration="3700000" />
+      <workItem from="1675686933125" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="migration finished">
       <created>1675367769025</created>

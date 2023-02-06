@@ -17,7 +17,7 @@ public class ChatGPT : BaseCommand
         name: "ChatGPT", 
         aliases: null, 
         description: "Ich beantworte deine Fragen mithilfe meines HochverdienerIQ's",
-        options: new[] {new SlashCommandOptionBuilder().WithName("question").WithDescription("Frage die du stellen willst").WithType(ApplicationCommandOptionType.String).WithRequired(true), new SlashCommandOptionBuilder().WithName("questionquality").WithDescription("Schnell generiert oder langsam aber besser").WithRequired(true).WithType(ApplicationCommandOptionType.String).AddChoice("Schnell", "ada").AddChoice("Qualitativ", "davinci")},
+        options: new[] {new SlashCommandOptionBuilder().WithName("question").WithDescription("Frage die du stellen willst").WithType(ApplicationCommandOptionType.String).WithRequired(true), new SlashCommandOptionBuilder().WithName("questionquality").WithDescription("Mit welcher meiner multiplen Persönlichenkeit möchtest du reden?").WithRequired(true).WithType(ApplicationCommandOptionType.String).AddChoice("Ada (Am Schnellsten)", "ada").AddChoice("Babbage", "babbage").AddChoice("Curie", "curie").AddChoice("Davinci (Am Schlausten)", "davinci")},
         permission: null)
     {
         
@@ -27,23 +27,32 @@ public class ChatGPT : BaseCommand
     {
        
         var question = command.Data.Options.First().Value.ToString();
-        command.RespondAsync(AskChatGPT(question,command.Data.Options.Last().Value.ToString()));
+        command.RespondAsync(AskChatGPT(question,command.Data.Options.Last().Value.ToString()!));
         return base.Execute(command);
     }
-    private string AskChatGPT(string? question, string model_name)
+    private static string AskChatGPT(string? question, string modelName)
     {
         //TODO: Conversations
         Model model;
         string key;
-        if (model_name == "ada")
+        switch (modelName)
         {
-            key = Keys.OpenAiApiKeyAdaText;
-            model = Model.BabbageText;
-        }
-        else
-        {
-            key = Keys.OpenAiApiKeyDavinciText;
-            model = Model.DavinciText;
+            case "babbage":
+                key = Keys.OpenAiApiKeyBabbage;
+                model = Model.BabbageText;
+                break;
+            case "curie":
+                key = Keys.OpenAiApiKeyCurie;
+                model = Model.CurieText;
+                break;
+            case "davinci":
+                key = Keys.OpenAiApiKeyDavinci;
+                model = Model.DavinciText;
+                break;
+            default: 
+                key = Keys.OpenAiApiKeyAda;
+                model = Model.AdaText;
+                break;
         }
         var api = new OpenAIAPI(key);
         var result =

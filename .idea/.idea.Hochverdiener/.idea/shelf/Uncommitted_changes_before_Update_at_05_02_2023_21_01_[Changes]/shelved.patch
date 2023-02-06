@@ -1,0 +1,98 @@
+Index: Hochverdiener/Commands/Chat/ChatGPT.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Text;\r\nusing Discord;\r\nusing Discord.WebSocket;\r\nusing Newtonsoft.Json;\r\nusing System.Text.Json;\r\nusing Hochverdiener.keys;\r\nusing OpenAI_API;\r\nusing OpenAI_API.Completions;\r\nusing OpenAI_API.Models;\r\nusing JsonSerializer = System.Text.Json.JsonSerializer;\r\n\r\nnamespace Hochverdiener.Commands.Chat;\r\n\r\npublic class ChatGPT : BaseCommand\r\n{\r\n    public ChatGPT() : base(\r\n        name: \"ChatGPT\", \r\n        aliases: null, \r\n        description: \"Ich beantworte deine Fragen mithilfe meines HochverdienerIQ's\",\r\n        options: new[] {new SlashCommandOptionBuilder().WithName(\"question\").WithDescription(\"Frage die du stellen willst\").WithType(ApplicationCommandOptionType.String).WithRequired(true)},\r\n        permission: null)\r\n    {\r\n        \r\n    }\r\n    \r\n    public override Task Execute(SocketSlashCommand command)\r\n    {\r\n        var question = command.Data.Options.First().Value.ToString();\r\n        command.RespondAsync(AskChatGPT(question));\r\n        return base.Execute(command);\r\n    }\r\n//ToDo Fix this\r\n    private string AskChatGPT(string? question)\r\n    {\r\n        var api = new OpenAIAPI(Keys.OpenAiApiKey);\r\n        var result = api.Completions.GetCompletion(question);\r\n        Console.WriteLine(result.Result);\r\n        return result.Result;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Hochverdiener/Commands/Chat/ChatGPT.cs b/Hochverdiener/Commands/Chat/ChatGPT.cs
+--- a/Hochverdiener/Commands/Chat/ChatGPT.cs	(revision 24dc4b76755facde8a0cb4b9d5c8cc86a021f2bb)
++++ b/Hochverdiener/Commands/Chat/ChatGPT.cs	(date 1675623110040)
+@@ -26,11 +26,11 @@
+     public override Task Execute(SocketSlashCommand command)
+     {
+         var question = command.Data.Options.First().Value.ToString();
+-        command.RespondAsync(AskChatGPT(question));
++        command.RespondAsync(AskChatGpt(question));
+         return base.Execute(command);
+     }
+ //ToDo Fix this
+-    private string AskChatGPT(string? question)
++    private static string AskChatGpt(string? question)
+     {
+         var api = new OpenAIAPI(Keys.OpenAiApiKey);
+         var result = api.Completions.GetCompletion(question);
+Index: Hochverdiener/Program.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using Discord;\r\nusing Discord.WebSocket;\r\nusing Hochverdiener.keys;\r\n\r\nnamespace Hochverdiener\r\n{\r\n    public class Program\r\n    {\r\n        public static Task Main(string[] args) => new Program().MainAsync();\r\n        public static DiscordSocketClient? Client;\r\n\r\n        private Task Log(LogMessage msg)\r\n        {\r\n            Console.WriteLine(msg.ToString());\r\n            return Task.CompletedTask;\r\n        }\r\n\r\n\r\n        private async Task MainAsync()\r\n        {\r\n            Client = new DiscordSocketClient();\r\n\r\n            Client.Log += Log;\r\n\r\n            var token = Keys.testBotBenCSharpToken;\r\n            await Client.LoginAsync(TokenType.Bot, token);\r\n            await Client.StartAsync();\r\n            Client.Ready += Client_Ready;\r\n            Client.SlashCommandExecuted += SlashCommand;\r\n\r\n            await Task.Delay(-1);\r\n        }\r\n\r\n#pragma warning disable CS1998\r\n        private async Task Client_Ready()\r\n#pragma warning restore CS1998\r\n        {\r\n            BaseCommand.Init();\r\n        }\r\n\r\n        private async Task SlashCommand(SocketSlashCommand command)\r\n        {\r\n            foreach (var c in BaseCommand.Commands)\r\n            {\r\n\r\n                if (c.Name == command.Data.Name || c.Aliases != null && c.Aliases.Contains(command.Data.Name))\r\n                {\r\n                    await c.Execute(command);\r\n                }\r\n            }\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Hochverdiener/Program.cs b/Hochverdiener/Program.cs
+--- a/Hochverdiener/Program.cs	(revision 24dc4b76755facde8a0cb4b9d5c8cc86a021f2bb)
++++ b/Hochverdiener/Program.cs	(date 1675622920182)
+@@ -22,7 +22,7 @@
+ 
+             Client.Log += Log;
+ 
+-            var token = Keys.testBotBenCSharpToken;
++            var token = Keys.TestBotBenCSharpToken;
+             await Client.LoginAsync(TokenType.Bot, token);
+             await Client.StartAsync();
+             Client.Ready += Client_Ready;
+Index: .idea/.idea.Hochverdiener/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoGeneratedRunConfigurationManager\">\r\n    <projectFile>Hochverdiener/Hochverdiener.csproj</projectFile>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"4c0e5b2b-8487-49d1-b9a3-515edcee033f\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"true\" />\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2LC9uxHtPSG7sLWzcipRaxn7Ued\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;rider.external.source.directories&quot;: [\r\n      &quot;C:\\\\Users\\\\MCmoderSD\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2022.3\\\\resharper-host\\\\DecompilerCache&quot;,\r\n      &quot;C:\\\\Users\\\\MCmoderSD\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2022.3\\\\resharper-host\\\\SourcesCache&quot;,\r\n      &quot;C:\\\\Users\\\\MCmoderSD\\\\AppData\\\\Local\\\\Symbols\\\\src&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Hochverdiener\" type=\"DotNetProject\" factoryName=\".NET Project\">\r\n      <option name=\"EXE_PATH\" value=\"\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"PROJECT_PATH\" value=\"$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj\" />\r\n      <option name=\"PROJECT_EXE_PATH_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_ARGUMENTS_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_WORKING_DIRECTORY_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_KIND\" value=\"DotNetCore\" />\r\n      <option name=\"PROJECT_TFM\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"4c0e5b2b-8487-49d1-b9a3-515edcee033f\" name=\"Changes\" comment=\"\" />\r\n      <created>1675364424068</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1675364424068</updated>\r\n      <workItem from=\"1675364425388\" duration=\"829000\" />\r\n      <workItem from=\"1675366358118\" duration=\"135000\" />\r\n      <workItem from=\"1675366931907\" duration=\"22000\" />\r\n      <workItem from=\"1675367221151\" duration=\"543000\" />\r\n      <workItem from=\"1675368115961\" duration=\"2185000\" />\r\n      <workItem from=\"1675375590791\" duration=\"267000\" />\r\n      <workItem from=\"1675433816253\" duration=\"2276000\" />\r\n      <workItem from=\"1675450703582\" duration=\"2422000\" />\r\n      <workItem from=\"1675453171567\" duration=\"78000\" />\r\n      <workItem from=\"1675453293077\" duration=\"422000\" />\r\n      <workItem from=\"1675520819964\" duration=\"2154000\" />\r\n      <workItem from=\"1675523107298\" duration=\"10000\" />\r\n      <workItem from=\"1675523480017\" duration=\"49000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"migration finished\">\r\n      <created>1675367769025</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675367769025</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"README.md\">\r\n      <created>1675370117534</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675370117534</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"README.md\">\r\n      <created>1675370183444</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675370183444</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\".gitignore\">\r\n      <created>1675375853438</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675375853438</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Cleanup &amp; Restructure\">\r\n      <created>1675434923286</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675434923286</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Song Search Engine Base\">\r\n      <created>1675436112329</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675436112329</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"ChatGPT.cs\">\r\n      <created>1675453047510</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675453047510</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"NUnit\" />\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n    <MESSAGE value=\"migration finished\" />\r\n    <MESSAGE value=\"README.md\" />\r\n    <MESSAGE value=\".gitignore\" />\r\n    <MESSAGE value=\"Cleanup &amp; Restructure\" />\r\n    <MESSAGE value=\"Song Search Engine Base\" />\r\n    <MESSAGE value=\"ChatGPT.cs\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ChatGPT.cs\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.Hochverdiener/.idea/workspace.xml b/.idea/.idea.Hochverdiener/.idea/workspace.xml
+--- a/.idea/.idea.Hochverdiener/.idea/workspace.xml	(revision 24dc4b76755facde8a0cb4b9d5c8cc86a021f2bb)
++++ b/.idea/.idea.Hochverdiener/.idea/workspace.xml	(date 1675627280217)
+@@ -7,7 +7,7 @@
+     <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Hochverdiener.csproj" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Hochverdiener/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Program.cs" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -93,6 +93,9 @@
+       <workItem from="1675520819964" duration="2154000" />
+       <workItem from="1675523107298" duration="10000" />
+       <workItem from="1675523480017" duration="49000" />
++      <workItem from="1675523569674" duration="2371000" />
++      <workItem from="1675622648772" duration="1565000" />
++      <workItem from="1675625980011" duration="1174000" />
+     </task>
+     <task id="LOCAL-00001" summary="migration finished">
+       <created>1675367769025</created>
+@@ -143,7 +146,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1675453047510</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="Restructure">
++      <created>1675526544769</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1675526544769</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -160,6 +170,7 @@
+     <MESSAGE value="Cleanup &amp; Restructure" />
+     <MESSAGE value="Song Search Engine Base" />
+     <MESSAGE value="ChatGPT.cs" />
+-    <option name="LAST_COMMIT_MESSAGE" value="ChatGPT.cs" />
++    <MESSAGE value="Restructure" />
++    <option name="LAST_COMMIT_MESSAGE" value="Restructure" />
+   </component>
+ </project>
+\ No newline at end of file

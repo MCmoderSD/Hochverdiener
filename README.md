@@ -15,7 +15,7 @@ You can add the bot to your server: [Click Here](https://discord.com/api/oauth2/
 - Zahl<br>
 
 **Commands in Development:**
-- ChatGPT integration
+- ChatGPT integration **[ALMOST DONE!!!]**
 - Music
 ## Installation
 If you want to host your own bot you need to perform the following steps:
@@ -30,6 +30,11 @@ public class Keys
 {
     // OpenAI API Key:
     public static readonly string OpenAiApiKey = "YOUR_API_KEY";
+    // OpenAI API Key Configurations:
+    public static readonly string OpenAiApiKeyAda = OpenAiApiKey;
+    public static readonly string OpenAiApiKeyBabbage = OpenAiApiKey;
+    public static readonly string OpenAiApiKeyCurie = OpenAiApiKey;
+    public static readonly string OpenAiApiKeyDavinci = OpenAiApiKey;
     
     // Discord Tokens:
     public static readonly string hochverdienerToken = "PUT_YOUR_BOT_TOKEN_HERE";
@@ -43,10 +48,11 @@ public class Keys
 ```
 5. Make sure to replace the ``PUT_YOUR_BOT_TOKEN_HERE`` with your bot token.
 6. Run the project and the bot should be online.
-7. The exe and dll  files are located in the bin folder of the project.
+7. For the logging feature to work you have to write the **full file path** where the logs should be stored as argument when starting the bot. Example: <br>`` $ ./Hochverdiener.exe C:\Users\Username\Hochverdiener\logs\ ``<br> The folder will be created if it doesn't exist.
+8. The exe and dll  files are located in the bin folder of the project.
 
 If you want you can create own Commands inside the **Commands** folder.<br>
-To enable them you need to add them at the bottom of **BaseCommand.cs** which is located in the **src** folder.<br>
+To enable them you need to add them at the bottom of **BaseCommand.cs** which is located in the **Commands** folder.<br>
 ```csharp
 public static void Init()
     {
@@ -57,6 +63,7 @@ public static void Init()
 
     public static void InitChatCommands()
     {
+        new ChatGPT().Register();
         new Dicksize().Register();
         new Fact().Register();
         new Insult().Register();
@@ -68,6 +75,6 @@ public static void Init()
     }
     public static void InitMusicCommands()
     {
-        new Play();
+        new Play().Register();
     }
 ```
