@@ -75,6 +75,7 @@ public class BaseCommand
         new Mobbing().Register();
         new SexistScore().Register();
         new Zahl().Register();
+        new Play().Register();
     }
     public static void InitMusicCommands()
     {

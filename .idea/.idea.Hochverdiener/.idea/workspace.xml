@@ -4,18 +4,24 @@
     <projectFile>Hochverdiener/Hochverdiener.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="added Ada / Davinci GPT option">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_1.xml" afterDir="false" />
+    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/src/AudioPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_14_56__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_21_01_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/shelf/Uncommitted_changes_before_Update_at_05_02_2023_21_01__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/BaseCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Music/src/YouTubeEngine.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/66b487ea11a3dd6c52189bafe7de50c7c57cab17b76eb6379f4b56d098cc60c9/BaseClientService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,29 +39,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "v3",
-    "ignore.virus.scanning.warn.message": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ReSpellerSettingsId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.environmentSetup&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\MCmoderSD\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\MCmoderSD\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\MCmoderSD\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Hochverdiener" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Hochverdiener/bin/Debug/net7.0/Hochverdiener.exe" />
@@ -98,7 +108,15 @@
       <workItem from="1675523107298" duration="10000" />
       <workItem from="1675523480017" duration="49000" />
       <workItem from="1675622695361" duration="3700000" />
-      <workItem from="1675686933125" duration="1236000" />
+      <workItem from="1675686933125" duration="1770000" />
+      <workItem from="1675782302486" duration="29000" />
+      <workItem from="1677686047245" duration="48000" />
+      <workItem from="1677686103752" duration="56000" />
+      <workItem from="1680776127854" duration="98000" />
+      <workItem from="1680776237038" duration="217000" />
+      <workItem from="1680776480928" duration="15000" />
+      <workItem from="1680776512722" duration="3705000" />
+      <workItem from="1680780325761" duration="793000" />
     </task>
     <task id="LOCAL-00001" summary="migration finished">
       <created>1675367769025</created>
@@ -191,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675626288317</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ChatGPT.cs and code restructure">
+      <created>1675688372673</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675688372673</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +224,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -214,6 +250,7 @@
     <MESSAGE value="added command logginh" />
     <MESSAGE value="changed to davinci" />
     <MESSAGE value="added Ada / Davinci GPT option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Ada / Davinci GPT option" />
+    <MESSAGE value="ChatGPT.cs and code restructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChatGPT.cs and code restructure" />
   </component>
 </project>
