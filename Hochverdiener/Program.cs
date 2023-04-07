@@ -1,5 +1,6 @@
 ﻿using Discord;
 using Discord.WebSocket;
+using Hochverdiener.Commands;
 using Hochverdiener.keys;
 
 namespace Hochverdiener

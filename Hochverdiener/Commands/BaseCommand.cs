@@ -3,7 +3,7 @@ using Discord.WebSocket;
 using Hochverdiener.Commands.Chat;
 using Hochverdiener.Commands.Music;
 
-namespace Hochverdiener;
+namespace Hochverdiener.Commands;
 
 public class BaseCommand
 {
@@ -53,7 +53,12 @@ public class BaseCommand
     
     public virtual Task Execute(SocketSlashCommand command)
     {
-        Logger.Log("Command executed: " + command.Data.Name + " by " + command.User.Username + "#" + command.User.Discriminator + " with parameters " + command.Data.Options.Select(x => x.Name + ": " + x.Value).Aggregate((x, y) => x + ", " + y) + "");
+        String parameters;
+        if(command.Data.Options.Count == 0)
+            parameters = "None";
+        else
+            parameters = command.Data.Options.Select(x => x.Name + ": " + x.Value).Aggregate((x, y) => x + ", " + y);
+        Logger.Log("Command executed: " + command.Data.Name + " by " + command.User.Username + "#" + command.User.Discriminator + " with parameters " + parameters);
         return Task.CompletedTask;
     }
     

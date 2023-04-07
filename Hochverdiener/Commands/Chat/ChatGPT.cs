@@ -1,13 +1,9 @@
-﻿using System.Text;
-using Discord;
+﻿using Discord;
 using Discord.WebSocket;
-using Newtonsoft.Json;
-using System.Text.Json;
 using Hochverdiener.keys;
 using OpenAI_API;
 using OpenAI_API.Completions;
 using OpenAI_API.Models;
-using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Hochverdiener.Commands.Chat;
 
@@ -18,7 +14,9 @@ public class ChatGPT : BaseCommand
         aliases: null, 
         description: "Ich beantworte deine Fragen mithilfe meines HochverdienerIQ's",
         options: new[] {new SlashCommandOptionBuilder().WithName("question").WithDescription("Frage die du stellen willst").WithType(ApplicationCommandOptionType.String).WithRequired(true), new SlashCommandOptionBuilder().WithName("questionquality").WithDescription("Mit welcher meiner multiplen Persönlichenkeit möchtest du reden?").WithRequired(true).WithType(ApplicationCommandOptionType.String).AddChoice("Ada (Am Schnellsten)", "ada").AddChoice("Babbage", "babbage").AddChoice("Curie", "curie").AddChoice("Davinci (Am Schlausten)", "davinci")},
-        permission: null)
+        permission: null,
+        serverOnly: false
+        )
     {
         
     }

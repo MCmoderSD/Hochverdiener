@@ -17,7 +17,7 @@ public class Logger
     
     public void LogMessage(string message)
     {
-        var logFile = new FileInfo(Path.Combine(logDir.FullName, DateTime.Now.ToString("yyyy-MM-dd") + ".log"));
+        var logFile = new FileInfo(Path.Combine(logDir.FullName, DateTime.Now.ToString("dd-MM-yy") + ".log"));
         if (!logFile.Exists)
         {
             logFile.Create().Close();
