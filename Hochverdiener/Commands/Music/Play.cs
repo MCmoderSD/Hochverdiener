@@ -29,16 +29,27 @@ public class Play : BaseCommand
 
     public override async Task Execute(SocketSlashCommand command)
     {
+        string youtubeLink = null;
         var searchQuery = command.Data.Options.First(x => x.Name == "name").Value.ToString();
-        var searchListRequest = YoutubeService.Search.List("snippet");
-        searchListRequest.Q = searchQuery;
-        searchListRequest.MaxResults = 1;
-        searchListRequest.Type = "video";
-        var searchListResponse = await searchListRequest.ExecuteAsync();
-        var videoId = searchListResponse.Items.FirstOrDefault()?.Id.VideoId;
-        if (videoId != null)
+        var searchQueryPrepared = searchQuery.Replace(" ", "");
+        if (searchQueryPrepared.StartsWith("https://"))
         {
-            var youtubeLink = $"https://www.youtube.com/watch?v={videoId}";
+            youtubeLink = searchQuery;
+        }
+        else
+        {
+            var searchListRequest = YoutubeService.Search.List("snippet");
+            searchListRequest.Q = searchQuery;
+            searchListRequest.MaxResults = 1;
+            searchListRequest.Type = "video";
+            var searchListResponse = await searchListRequest.ExecuteAsync();
+            var videoId = searchListResponse.Items.FirstOrDefault()?.Id.VideoId;
+
+            if (videoId != null) youtubeLink = $"https://www.youtube.com/watch?v={videoId}";
+        }
+
+        if (youtubeLink != null)
+        {
             Playlist.Add(youtubeLink);
 
             var voiceChannel = (command.User as SocketGuildUser)?.VoiceChannel;
@@ -53,7 +64,7 @@ public class Play : BaseCommand
             {
                 var audioClient = await voiceChannel.ConnectAsync();
                 Console.WriteLine($"Der Bot wurde erfolgreich in den Channel {voiceChannel.Name} verschoben.");
-                
+
                 //Todo: Play the audio here
             }
             catch (Exception ex)

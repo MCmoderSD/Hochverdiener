@@ -7,13 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="added Ada / Davinci GPT option">
+    <list default="true" id="4c0e5b2b-8487-49d1-b9a3-515edcee033f" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hochverdiener/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/BaseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/BaseCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Chat/ChatGPT.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Commands/Music/Play.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hochverdiener/src/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hochverdiener/src/Logger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/Chat/ChatGPT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/coding/c#/rider/Hochverdiener/Hochverdiener/Commands/BaseCommand.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -202,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675626288317</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix">
+      <created>1680887910260</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680887910260</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +226,7 @@
     <MESSAGE value="added command logginh" />
     <MESSAGE value="changed to davinci" />
     <MESSAGE value="added Ada / Davinci GPT option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Ada / Davinci GPT option" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
